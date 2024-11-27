@@ -17,6 +17,7 @@ export default function Payslip() {
     ];
 
     return (
+      
       <>
       <div className="payslip-table-container">
         
@@ -77,10 +78,9 @@ export default function Payslip() {
   };
 
   // Call PayslipTable within the Payslip component's return
-  return (
-    <div>
-      <PayslipTable />
-      <Navbar/>
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <PayslipTable />
+  //   </div>
+  // );
 }
