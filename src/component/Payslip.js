@@ -17,7 +17,24 @@ export default function Payslip() {
     ];
 
     return (
+      
       <div className="payslip-table-container">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to='/ '>
+            <img src="assets/img/rivetcare_logo.png" alt="Rivet Care Logo" />
+          </Link>
+          <ul className="nav-links">
+            <li><a href="/" className="nav-link ">Home</a></li>
+            <li><a href="AboutUsClient" className="nav-link active">About Us</a></li>
+            <li><a href="ContactUsClient" className="nav-link ">Contact Us</a></li>
+          </ul>
+          <div className="nav-auth">
+            <a href="GetStarted" className="nav-auth-link">Sign in / Sign up</a>
+            <a href="creatyouraccount" className="nav-post-job">Employer/Post Job</a>
+          </div>
+        </div>
+      </nav>
         <div className="dashbord-text-editprofile">
           <h3>Pay Slip</h3>
         </div>
