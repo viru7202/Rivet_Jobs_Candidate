@@ -18,7 +18,7 @@ export default function Payslip() {
 
     return (
       <div className="payslip-table-container">
-        <Navbar />
+        <Navbar/>
         <div className="dashbord-text-editprofile">
           <h3>Pay Slip</h3>
         </div>
