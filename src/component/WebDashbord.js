@@ -178,8 +178,9 @@ function WebDashbord() {
                   </Link>
                 </div>
                 <div className="col-md-4 id">
-                <Link to="/Payslip">
+              
                   <div className="dashbord-card">
+                  <Link to="/Payslip">
                     <div className="dashbord-card-logo">
                       <svg
                         version="1.1"
@@ -224,8 +225,9 @@ function WebDashbord() {
                         elit. Recusandae architecto{" "}
                       </p>
                     </div>
+                    </Link>
                   </div>
-                  </Link>
+                  
                 </div>
                 <div className="col-md-4 id">
                   <div className="dashbord-card">
