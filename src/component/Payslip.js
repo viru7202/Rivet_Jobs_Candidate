@@ -17,8 +17,9 @@ export default function Payslip() {
     ];
 
     return (
+      <>
       <div className="payslip-table-container">
-        <Navbar/>
+        
         <div className="dashbord-text-editprofile">
           <h3>Pay Slip</h3>
         </div>
@@ -71,6 +72,7 @@ export default function Payslip() {
           </div>
         </div>
       </div>
+      </>
     );
   };
 
@@ -78,6 +80,7 @@ export default function Payslip() {
   return (
     <div>
       <PayslipTable />
+      <Navbar/>
     </div>
   );
 }
