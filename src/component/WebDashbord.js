@@ -178,6 +178,7 @@ function WebDashbord() {
                   </Link>
                 </div>
                 <div className="col-md-4 id">
+                <Link to="/Payslip">
                   <div className="dashbord-card">
                     <div className="dashbord-card-logo">
                       <svg
@@ -224,6 +225,7 @@ function WebDashbord() {
                       </p>
                     </div>
                   </div>
+                  </Link>
                 </div>
                 <div className="col-md-4 id">
                   <div className="dashbord-card">
