@@ -1,0 +1,663 @@
+body{
+  font-family: "Roboto";
+}
+
+.form-grouppp {
+    display: flex;
+    gap: 10px;
+  }
+  label {
+    /* margin-top: 10px; */
+    display: block;
+    
+  }
+  .terms {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .terms label {
+    display: block;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .terms p {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  .form-container {
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .name-group {
+    display: flex;
+    gap: 10px;
+  }
+  .name-group input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  .signature-pad {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    width: 400px;
+    height: 123px;
+    border-radius: 4px;
+  }
+  
+  
+  /* / General Styling / */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* / border: 1px solid #ddd; / */
+    border-radius: 10px !important;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #1D71B7 !important;
+/*     
+    padding: 8px;
+    text-align: left; */
+  }
+  
+  .table th {
+    /* / border: 1px solid #1D71B7 !important; / */
+    background-color: #EDF4F9 !important;
+    color: black;
+    font-weight: bold;
+    /* / border-radius: 10px !important; / */
+    
+  }
+  
+  /* / Alternating row colors / */
+  .table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #EDF4F9; 
+  }
+  
+  /* / Buttons Styling / */
+  .cancel-btn, .edit-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .cancel-btn {
+    color: #1D71B7;
+  }
+  
+  .edit-btn {
+    color: #1D71B7;
+  }
+  
+  /* / Responsive Table / */
+  .table-responsive {
+    overflow-x: initial;
+  }
+  .client_bok{
+    padding-bottom: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+  
+  
+  /* / ImageClient /
+  / Main container / */
+  .image-client-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .image-client-header {
+    margin-bottom: 20px;
+  }
+  
+  .image-client-search-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 40px;
+  }
+  
+  .image-client-input, .image-client-location {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .image-client-button {
+    padding: 10px 20px;
+    background-color: #1D71B7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .image-client-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-client-body {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .image-client-body p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .image-client-body-2{
+    margin-top: 30px;
+  }
+  .image-client-body-2 p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .image-client-link {
+    color: #1D71B7;
+    text-decoration: none;
+  }
+  
+  .image-client-link:hover {
+    text-decoration: underline;
+  }
+  .image-client-illustration{
+    text-align: center;
+    margin-top: 28px;  
+    
+  }
+  .image-client-illustration img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* / Navigation header remains unchanged / */
+  
+  /* / Footer Styles / */
+  .footer-home {
+    display: flex;
+    justify-content: center;
+    padding: 45px 0 25px 0;  
+    background-color: white;
+    border-top: 1px solid #ccc;
+    margin-top: 50px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* / Responsive Design / */
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* / Other existing styles from previous code /
+  
+  / Responsive Design / */
+  @media (max-width: 768px) {
+    .image-client-search-bar {
+      flex-direction: column;
+    }
+  
+    .image-client-input, .image-client-location {
+      width: 100%;
+    }
+  
+    .image-client-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-client-container {
+      padding: 10px;
+    }
+  
+    .image-client-body {
+      font-size: 14px;
+    }
+  }
+  /* / Navigation header / */
+  .nav-header-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1D71B7;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding-top: 15px;
+    margin-right: 558px;
+    
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .nav-link.active {
+    color: #1D71B7;
+    border-bottom: 2px solid #1D71B7;
+  }
+  
+  .nav-link:hover {
+    color: #1D71B7;
+  }
+  
+  .nav-auth {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-auth-link, .nav-post-job {
+    text-decoration: none;
+    color: #1D71B7;
+    font-size: 16px;
+  }
+  
+  .nav-post-job {
+    font-weight: bold;
+  }
+  
+  /* / Responsive Design / */
+  @media (max-width: 768px) {
+    /* .nav-links {
+      display: none;
+    } */
+  
+    .nav-header-home {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-auth {
+      margin-top: 10px;
+    }
+  }
+  
+  /* / Search and Body styling remains the same from previous code / */
+  
+  /* / About Us Section / */
+  .aboutus-client-section {
+    padding: 40px 20px;
+    /* / height: 400px !important; / */
+    width: 100%;
+    background-color: #EDF4F9;
+    border-radius: 15px;
+    border: 1px solid #AFDDFD;
+    /* / font-family: Arial, sans-serif;   / */
+    margin: 5% 0% !important;
+  
+  }
+  
+  .aboutus-client-section h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #1C1C1C;
+  }
+  
+  .aboutus-client-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .aboutus-for-workers, .aboutus-why-register, .aboutus-for-employers {
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  .aboutus-why-register span{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+  
+  .aboutus-client-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 11.47px;
+  }
+  
+  .aboutus-client-section p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #3E3E3E;
+  }
+  
+  .aboutus-why-register ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .aboutus-why-register ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  
+  /* / Container styling for Contact Us Section / */
+  .container {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    /* padding: 50px; */
+    /* font-family: Arial, sans-serif; */
+  }
+  
+  /* / Contact Us Section / */
+  .contactus-client-section {
+    display: flex;
+    width: 100%;
+    /* max-width: 1200px; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* / Left Side - Contact Information / */
+  .contact-info {
+    width: 54%;
+    background-color: #1D71B7;
+    color: white;
+    padding: 40px;
+  }
+  
+  .contact-info h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-info ul li i {
+    margin-right: 10px;
+  }
+  
+  .social-media {
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    color: white;
+    font-size: 20px;
+    margin-right: 25px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #ccc;
+  }
+  
+  /* / Right Side - Contact Form / */
+  .contact-form {
+    width: 60%;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  .contact-form form {
+    width: 100%;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    
+  }
+  label{
+    margin: 0;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    /* width: 100%; */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .send-message-btn {
+    display: block;
+    width: auto;
+    padding: 10px;
+    background-color: #0e7bbe;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .send-message-btn:hover {
+    background-color: #095b9e;
+  }
+  
+  
+
+  /* / / payslip / / */
+.payslip-table-container {
+  width: 100%;
+  padding: 20px;
+}
+.payslip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.payslip-th,
+.payslip-td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+.payslip-th {
+  background-color: #1D71B714;
+  font-weight: bold;
+}
+.payslip-td {
+  background-color: #ffffff;
+}
+tbody tr:nth-child(odd) .payslip-td {
+  background-color: #1D71B714;
+}
+.view-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  color: #1D71B7;
+}
+.view-button:focus {
+  outline: none;
+}
+/* / main searchbar / */
+
+.main-search-bar1 {
+  display: flex;
+  justify-content: center;
+}
+.search-bar-1 {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center !important;
+}
+.search-bar-1 input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex-grow: 1;
+}
+.search-bar-1 input::placeholder {
+  color: #bbb;
+}
+.search-bar-1 button {
+  background-color: #1D71B7;
+  ;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-bar-1 button:hover {
+  /* background-color: #0056b3; */
+}
+.search-bar-1 .icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #888;
+  margin-top: 0px !important;
+}
+td.payslip-td {
+  border-color: #1D71B7;
+}
+th.payslip-th {
+  border-color: #1D71B7;
+  color: #1D71B7;
+}
+@media only screen and (max-width: 768px) {
+  .search-bar-1 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .search-bar-1 {
+    width: 85%;
+  }
+}
+
+/* payslip  */
+
+/* / candidatemyjobs1 / */
+
+.myjob-main{
+  display: flex;
+}
+.myjob-button{
+  padding: 10px;
+}
+.myjob-button button{
+height: 28px;
+width: 110px;
+background-color: #1D71B7; 
+border: none;
+border-radius: 5px;
+color: white;
+}
+
+/* / candidatemyjobs1 / */
+
+/* / main searchbar / */
