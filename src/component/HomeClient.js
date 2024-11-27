@@ -12,7 +12,7 @@ function HomeClient() {
       {/* {/ Navigation Header /} */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
         <div className="container-fluid">
-          <Link className="navbar-brand" to='/'>
+          <Link className="navbar-brand" to='/ '>
             <img src="assets/img/rivetcare_logo.png" alt="Rivet Care Logo" />
           </Link>
           <ul className="nav-links">
