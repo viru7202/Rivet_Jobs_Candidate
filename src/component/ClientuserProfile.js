@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 function ClientuserProfile() {
 
- 
+
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
@@ -33,7 +33,7 @@ function ClientuserProfile() {
                   count={5}
                   onChange={ratingChanged}
                   size={24}
-                  activeColor="#ffd700"
+                  activeColor="#F19E1F"
                 /><span className="revv" style={{ paddingLeft: '10px', paddingTop: '10px' }}>4.0 </span><span className="revv" style={{ paddingLeft: '10px', paddingTop: '10px' }} >  ( Reviews 0/2 )</span></p>
 
               </div>
@@ -195,11 +195,11 @@ function ClientuserProfile() {
         </div>
       </div>
 
-   
+
 
       <style jsx>{`
         .editing-2 {
-          margin-top: 95px;
+          margin-top: 5%;
           width: 290px;
           height: 45px;
           border-radius: 5.73px;

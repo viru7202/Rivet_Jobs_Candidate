@@ -19,7 +19,7 @@ function Cdtreview() {
       <div className="container">
         <div className="profile">Candidate Profile</div>
         <div className="profileBg">
-          <div className="row">
+          {/* <div className="row">
             <div className="col-md-3">
               <div className="image">
                 <img src="assets/css/boy 1.png"></img>
@@ -50,10 +50,52 @@ function Cdtreview() {
               </div>
     
             </div>
+          </div> */}
+          <div className="row">
+            {/* Image Section */}
+            <div className="col-lg-3 col-md-4 col-sm-12">
+              <div className="image text-center">
+                <img
+                  src="assets/css/boy 1.png"
+                  alt="Profile"
+                  className="img-fluid rounded"
+                />
+              </div>
+            </div>
+
+            {/* Details Section */}
+            <div className="col-lg-9 col-md-8 col-sm-12">
+              <div className="dfx">
+                <div className="heading">
+                  <strong>Smith</strong>
+                </div>
+              </div>
+
+              <div className="border my-3" style={{ width: "95%" }}></div>
+
+              <div className="details">
+                {/* Date of Birth */}
+                <div className="row mb-3">
+                  <div className="col-6">
+                    <div className="cc">
+                      <p className="bold">Date of Birth</p>
+                      <p className="text">19-12-1998</p>
+                    </div>
+                  </div>
+                  {/* Gender */}
+                  <div className="col-6">
+                    <div className="cc">
+                      <p className="bold">Gender</p>
+                      <p className="text">Male</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="contactDetail">
-          <div className="contact">Client's Profile</div>
+          <div className="contact">Candidate Profile</div>
           <div className="border"></div>
           <div className="row">
             <div className="col-md-6">
@@ -81,7 +123,6 @@ function Cdtreview() {
                   <p className="email-p">380051 </p>
                 </div>
               </div>
-
             </div>
             <div className="col-md-6">
               <div className="photo">
@@ -98,7 +139,6 @@ function Cdtreview() {
                   <p className="email-p">Ahmedabad </p>
                 </div>
               </div>
-
             </div>
 
             <div className="contact">Employment Status</div>
@@ -108,21 +148,20 @@ function Cdtreview() {
                 <img src="/assets/css/mailIcon.svg"></img>
                 <div className="emailAddress">
                   Current Employment
-                  <p className="email-p">Sr. UI UX Designer May 2023 - Present </p>
+                  <p className="email-p">
+                    Sr. UI UX Designer May 2023 - Present{" "}
+                  </p>
                 </div>
               </div>
-
-
-
             </div>
             <div className="col-md-6">
-
               <div className="photo">
                 <img src="/assets/css/mailIcon.svg"></img>
                 <div className="emailAddress">
                   Pervious Employment
-                  <p className="email-p">Sr. Web Designer at XYZ PVT LTD.
-                    March 2018 - May 2023</p>
+                  <p className="email-p">
+                    Sr. Web Designer at XYZ PVT LTD. March 2018 - May 2023
+                  </p>
                 </div>
               </div>
             </div>
@@ -130,14 +169,14 @@ function Cdtreview() {
           {/* <button className="editing">Edit</button> */}
         </div>
         <div className="contactDetail">
-          
-       
           <div className="review-client">
             <div className="contact">Review</div>
             <div className="border"></div>
           </div>
           <div className="editButton">
-            <button className="editing-2" onClick={togglePopup}>Add Review</button>
+            <button className="editing-2" onClick={togglePopup}>
+              Add Review
+            </button>
           </div>
         </div>
       </div>
@@ -165,11 +204,17 @@ function Cdtreview() {
                 />
               </div>
               <div className="modal-buttons">
-                <button className="next-button" type="button" onClick={togglePopup}>Cancel</button>
-                <button className="cancel-button" type="submit">Post review</button>
+                <button
+                  className="next-button"
+                  type="button"
+                  onClick={togglePopup}
+                >
+                  Cancel
+                </button>
+                <button className="cancel-button" type="submit">
+                  Post review
+                </button>
               </div>
-
-
             </form>
           </div>
         </div>
@@ -188,21 +233,6 @@ function Cdtreview() {
           font-size: 14px;
           padding: 10px 41px 10px 45px;
         }
-        
-        .popup-overlay {
-            backdrop-filter: blur(5px);
-            z-index: 10;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000;
-        }
 
         .popup {
           background: white;
@@ -210,6 +240,7 @@ function Cdtreview() {
           border-radius: 10px;
           width: 600px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          scale: 0.9;
         }
 
         .popup h3 {
@@ -226,7 +257,8 @@ function Cdtreview() {
           font-weight: bold;
         }
 
-        .popup input, .popup textarea {
+        .popup input,
+        .popup textarea {
           margin-top: 5px;
           padding: 10px;
           border-radius: 5px;
@@ -255,45 +287,45 @@ function Cdtreview() {
           background: #1d71b7;
           color: white;
         }
-  .modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap:  10%;
-  }
+        .modal-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 10%;
+        }
 
-  .next-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-button.next-button {
-    width: 183px;
-    height: 47px;
-}
-  .cancel-button {
-    background-color: #ccc;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-button.cancel-button {
-    height: 47px;
-    width: 183px;
-}
-  .next-button:hover {
-    background-color: #0056b3;
-  }
+        .next-button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        button.next-button {
+          width: 183px;
+          height: 47px;
+        }
+        .cancel-button {
+          background-color: #ccc;
+          color: #333;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        button.cancel-button {
+          height: 47px;
+          width: 183px;
+        }
+        .next-button:hover {
+          background-color: #0056b3;
+        }
 
-  .cancel-button:hover {
-    background-color: #999;
-  }
+        .cancel-button:hover {
+          background-color: #999;
+        }
       `}</style>
     </div>
   );

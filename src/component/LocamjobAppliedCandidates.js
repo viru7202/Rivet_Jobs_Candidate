@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function LocamjobAppliedCandidates() {
   return (
     <div>
+      <Navbar />                              
       <div className="container">
         <div className="dashbord-text">
           <h3>Applied Candidates</h3>
@@ -29,6 +31,9 @@ export default function LocamjobAppliedCandidates() {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
+              <div className="candidates-conter-media">
+                  <h3>Candidates Vacancy Title Interested?</h3>
+                </div>
                 <div className="candidates-conter">
                   <h3>Candidates</h3>
                 </div>

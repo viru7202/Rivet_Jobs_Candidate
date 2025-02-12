@@ -36,7 +36,7 @@ function ClientProfile() {
                   count={5}
                   onChange={ratingChanged}
                   size={24}
-                  activeColor="#ffd700"
+                  activeColor="#F19E1F"
                 /><span className="revv" style={{ paddingLeft: '10px', paddingTop: '10px' }}>4.0 </span><span className="revv" style={{ paddingLeft: '10px', paddingTop: '10px' }} >  ( Reviews 0/2 )</span></p>
 
               </div>
@@ -216,7 +216,7 @@ function ClientProfile() {
                   count={5}
                   onChange={ratingChanged}
                   size={24}
-                  activeColor="#ffd700"
+                  activeColor="#F19E1F"
                 />
               </div>
               <div className="modal-buttons">
@@ -232,7 +232,7 @@ function ClientProfile() {
 
       <style jsx>{`
         .editing-2 {
-          margin-top: 95px;
+          margin-top: 25px;
           width: 290px;
           height: 45px;
           border-radius: 5.73px;
@@ -244,20 +244,7 @@ function ClientProfile() {
           padding: 10px 41px 10px 45px;
         }
         
-        .popup-overlay {
-            backdrop-filter: blur(5px);
-            z-index: 10;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 1000;
-        }
+      
 
         .popup {
           background: white;

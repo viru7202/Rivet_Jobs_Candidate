@@ -14,7 +14,7 @@ export default function CandidateReferredFriends() {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/webdeshbord">
+          <Link className="navbar-brand" to="/">
             <img src="assets/img/rivetcare_logo.png" alt="" />
           </Link>
           {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,9 @@ export default function CandidateReferredFriends() {
             <form className="d-flex" role="search">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item dropdown">
-                  <a
-                    className="nav-link "
-                    href="#"
+                  <Link
+                    className="nav-link"
+                    to="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -60,10 +60,10 @@ export default function CandidateReferredFriends() {
                         <p>Demo user</p>
                       </div>
                       <div className="aero">
-                        <i class="fa-solid fa-caret-down"></i>
+                        <i className="fa-solid fa-caret-down"></i>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
                       <NavLink className="dropdown-item" to="/candidateprofile">
@@ -88,9 +88,10 @@ export default function CandidateReferredFriends() {
                       </NavLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i>Sign out
-                      </a>
+                      <Link className="dropdown-item" to="/">
+                        <i className="fa-solid fa-right-from-bracket"></i> Sign
+                        out
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -150,10 +151,10 @@ export default function CandidateReferredFriends() {
           </form>
         </Modal.Body>
       </Modal>
-    <div className="container">
-      <div className="dashbord-text">
-        <h3>Referred  Friends</h3>
-      </div>
+      <div className="container">
+        <div className="dashbord-text">
+          <h3>Referred Friends</h3>
+        </div>
       </div>
       <div className="clint-webpage-1 candidate-detailview">
         <div className="clint-inputs view-details">
@@ -320,6 +321,11 @@ export default function CandidateReferredFriends() {
       </Tabs>
 
       <style jsx>{`
+      .notification {
+    font-size: 24px;
+    padding-right: 15px;
+    padding-top: 0px;
+}
         .ref-btt {
           backdrop-filter: blur(5px);
           background: #1d71b7;
@@ -332,6 +338,9 @@ export default function CandidateReferredFriends() {
           line-height: 16.41px;
           font-weight: 700;
         }
+=========
+    
+>>>>>>>>> Temporary merge branch 2
         button.ref-btt {
           background: #1d71b7;
           border: none;

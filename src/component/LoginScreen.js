@@ -12,7 +12,7 @@ export default function LoginScreen() {
     setShowModal(false);
   };
 
-  const [cadidate, setCandidate] = useState(false)
+  const [cadidate, setCandidate] = useState(false);
 
   return (
     <div>
@@ -35,17 +35,20 @@ export default function LoginScreen() {
             <h4>Password</h4>
           </div>
           <div className="email-input">
-            <input type="password" placeholder="Passwoed"></input>
+            <input type="password" placeholder="Password"></input>
           </div>
           <div className="forgot my-3">
             <p>Forgot password ?</p>
           </div>
           <div className="verify-button">
-            <Link to={'/CdtDashboard'}>
-            <button>Login</button>
+            <Link to={"/candidate-dashboard"}>
+              <button>Login</button>
             </Link>
             <p>
-              Don’t have an account? <span onClick={handleSignUpClick}>Sign Up</span>
+              Don’t have an account?{" "}
+              <span onClick={handleSignUpClick} style={{ cursor: "pointer" }}>
+                Sign Up
+              </span>
             </p>
             <hr></hr>
           </div>
@@ -58,22 +61,42 @@ export default function LoginScreen() {
             <div className="options">
               <label className="option-label">
                 {/* <Link to={cadidate ? '/CreateYourAccount' : '/'}> */}
-                <input type="radio" name="userType" value="candidate" onClick={() => { setCandidate(false) }} defaultChecked />
+                <input
+                  type="radio"
+                  name="userType"
+                  value="candidate"
+                  onClick={() => {
+                    setCandidate(false);
+                  }}
+                  defaultChecked
+                />
                 <span>As a Candidate (looking for a job)</span>
                 {/* </Link> */}
               </label>
-              <label className="option-label" >
+              <label className="option-label">
                 {/* <a href="ClientCreateAC"> */}
-                <input type="radio" name="userType" value="employer" onClick={() => { setCandidate(true) }} />
-                <span>As an Employer (hiring, sourcing, candidates or advertising jobs)</span>
+                <input
+                  type="radio"
+                  name="userType"
+                  value="employer"
+                  onClick={() => {
+                    setCandidate(true);
+                  }}
+                />
+                <span>
+                  As an Employer (hiring, sourcing, candidates or advertising
+                  jobs)
+                </span>
                 {/* </a> */}
               </label>
             </div>
             <div className="modal-buttons">
-              <Link to={cadidate ? '/ClientCreateAC' : '/CreateYourAccount'}>
-                <button className="next-button" >Next</button>
+              <Link to={cadidate ? "/ClientCreateAC" : "/CreateYourAccount"}>
+                <button className="next-button">Next</button>
               </Link>
-              <button className="cancel-button" onClick={handleCloseModal}>Cancel</button>
+              <button className="cancel-button" onClick={handleCloseModal}>
+                Cancel
+              </button>
             </div>
           </div>
         </div>

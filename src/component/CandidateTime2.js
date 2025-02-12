@@ -31,6 +31,15 @@ export default function CandidateTime2() {
     console.log("Form Submitted:", formData, signature);
   };
 
+  const [isModalOpenn, setIsModalOpenn] = useState(false);
+
+  const openModall = () => {
+    setIsModalOpenn(true);
+  };
+  const closeModall = () => {
+    setIsModalOpenn(false);
+  };
+
   return (
     <div>
       <Navbar />
@@ -139,52 +148,52 @@ export default function CandidateTime2() {
         <div className="profile">Sleep-in (if applicable)</div>
 
         <table className="table">
-        <thead>
+          <thead>
 
-          <tr className='firstrow'>
-            <th>DD-MM-YR</th>
-            <th>Start Time</th>
-            <th>End Time</th>
+            <tr className='firstrow'>
+              <th>DD-MM-YR</th>
+              <th>Start Time</th>
+              <th>End Time</th>
 
-          </tr>
-        </thead>
-        <tbody>
-        
-          <tr className='secrow'>
+            </tr>
+          </thead>
+          <tbody>
 
-            <td>DD-MM-YR</td>
-            <td>00:00 AM</td>
-            <td>00:00 AM</td>
+            <tr className='secrow'>
 
-          </tr>
-          <tr>
-            <td>DD-MM-YR</td>
-            <td>00:00 AM</td>
-            <td>00:00 AM</td>
+              <td>DD-MM-YR</td>
+              <td>00:00 AM</td>
+              <td>00:00 AM</td>
 
-          </tr>
-          <tr>
-            <td>DD-MM-YR</td>
-            <td>00:00 AM</td>
-            <td>00:00 AM</td>
+            </tr>
+            <tr>
+              <td>DD-MM-YR</td>
+              <td>00:00 AM</td>
+              <td>00:00 AM</td>
 
-          </tr>
-          <tr>
-            <td>DD-MM-YR</td>
-            <td>00:00 AM</td>
-            <td>00:00 AM</td>
+            </tr>
+            <tr>
+              <td>DD-MM-YR</td>
+              <td>00:00 AM</td>
+              <td>00:00 AM</td>
 
-          </tr>
-          <tr>
-            <td>DD-MM-YR</td>
-            <td>00:00 AM</td>
-            <td>00:00 AM</td>
-          </tr>
+            </tr>
+            <tr>
+              <td>DD-MM-YR</td>
+              <td>00:00 AM</td>
+              <td>00:00 AM</td>
 
-         
-        </tbody>
-      </table>
-        
+            </tr>
+            <tr>
+              <td>DD-MM-YR</td>
+              <td>00:00 AM</td>
+              <td>00:00 AM</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
 
         {/* Signature Section */}
         <div className="row">
@@ -357,28 +366,158 @@ export default function CandidateTime2() {
               </label>
             </div>
           </div>
-             <div className="edidprofile-buttons">
-                        <div className="row">
-                            <div className="col-md-2"></div>
-                            <div className="col-md-4">
-                                <div className="editprofile-button">
-                                    <button>submit</button>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="editprofile-button">
-                                    <button>Cancel</button>
-                                </div>
-                            </div>
-                            <div className="col-md-2"></div>
-                        </div>
-                    </div>
+          <div className="edidprofile-buttons">
+            <div className="row">
+              <div className="col-md-2"></div>
+              <div className="col-md-4">
+                <div className="editprofile-button">
+                  <button onClick={openModall} style={{ cursor: 'pointer' }}>Submit</button>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="editprofile-button">
+                  <button>Cancel</button>
+                </div>
+              </div>
+              <div className="col-md-2"></div>
+            </div>
+          </div>
         </div>
 
         {/* Submit Button */}
       </div>
 
+      {/* Modal for Cancellation */}
+      {isModalOpenn && (
+        <div className="popup-overlay">
+          <div className="modal-contentt">
+            <h3>Verify Your Details</h3>
+
+            <div className="reason-containerr">
+
+              <p style={{fontWeight:'700', fontSize:'16px', color:'#3E3E3E', lineHeight:'30px', paddingTop: '3%'}}> <strong>Note</strong>: Please review the details you have entered carefully. By clicking 'Confirm', you acknowledge that you are responsible for the accuracy of the information provided. Any errors or inaccuracies may result in consequences for which you will be liable.</p>
+
+            </div>
+            <div className='bt-reject-hire' style={{ display: 'flex', justifyContent: "space-evenly" }}>
+              <div className="popup-buttonss">
+                <button
+                  style={{
+                    display: "block",
+                    width: "159.16px",
+                    height: "42px",
+                    background: "#ECF3F8",
+                    color: "#1D71B7",
+                    borderRadius: "5px",
+                    border: "none",
+                    marginTop: "15px",
+                    fontWeight: '700',
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+              <div className="popup-buttonss">
+                <button onClick={closeModall}
+                  style={{
+                    display: "block",
+                    width: "159.16px",
+                    height: "42px",
+                    background: "#1D71B7",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    border: "none",
+                    marginTop: "15px",
+                    fontWeight: '700',
+                  }}
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
+
+.popup-overlay {
+          backdrop-filter: blur(5px);
+          z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+     .modal-contentt h3{
+          font-size: 24px;
+              font-weight: 700;
+      color: #3E3E3E;
+      text-align: center;
+      }
+   .modal-contentt {
+       margin: 15px;
+  
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    width: 600px;
+    
+}
+        .reason-containerr {
+  display: flex;
+  align-items: center;
+}
+       .popup-buttonss {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+        .popup-buttonss button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .popup-buttonss button:first-child {
+          background: #ddd;
+          color: #333;
+        }
+        .popup-buttonss button:last-child {
+          background: #1d71b7;
+          color: white;
+              width: 150px;
+        }
+     .reason-containerr input, .reason-containerr textarea {
+    margin-top: 30px;
+    padding: 25px 0 50px 25px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-left: 14px;
+}
+
+     .modal-contenttt h3{
+     text-align: center;
+  margin: 30px 0;
+        font-size: 24px;
+            font-weight: 700;
+    color: #3E3E3E;
+      }
+      .modal-contenttt {
+          margin: 15px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 600px;
+      }
+
+
         .signature {
           width: 100%;
           height: 64px !important;

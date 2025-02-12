@@ -14,7 +14,7 @@ export default function ClientTime1() {
   return (
     <div>
       <Navbar />
-      <div className="dashbord-text">
+      <div className="container dashbord-text">
         <h3>Booking</h3>
       </div>
 
@@ -59,9 +59,15 @@ export default function ClientTime1() {
                   Client
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -70,9 +76,15 @@ export default function ClientTime1() {
                   Business Unit
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -81,9 +93,15 @@ export default function ClientTime1() {
                   Candidate
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -92,7 +110,9 @@ export default function ClientTime1() {
                   Post Date
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -100,9 +120,15 @@ export default function ClientTime1() {
                   Booking Period
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -110,9 +136,15 @@ export default function ClientTime1() {
                   Booked By
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
             </div>
@@ -207,9 +239,15 @@ export default function ClientTime1() {
                   Client
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -218,9 +256,15 @@ export default function ClientTime1() {
                   Business Unit
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -229,9 +273,15 @@ export default function ClientTime1() {
                   Candidate
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -240,9 +290,15 @@ export default function ClientTime1() {
                   Post Date
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -250,9 +306,15 @@ export default function ClientTime1() {
                   Booking Period
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -260,9 +322,15 @@ export default function ClientTime1() {
                   Booked By
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
             </div>
@@ -322,9 +390,15 @@ export default function ClientTime1() {
                   Client
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -333,9 +407,15 @@ export default function ClientTime1() {
                   Business Unit
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -344,9 +424,15 @@ export default function ClientTime1() {
                   Candidate
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
 
@@ -355,7 +441,9 @@ export default function ClientTime1() {
                   Post Date
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -363,9 +451,15 @@ export default function ClientTime1() {
                   Booking Period
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
               <div className="btn-group">
@@ -373,9 +467,15 @@ export default function ClientTime1() {
                   Booked By
                 </button>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
-                  <li><a className="dropdown-item" href="#">Menu item</a></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+                  <li><Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
                 </ul>
               </div>
             </div>

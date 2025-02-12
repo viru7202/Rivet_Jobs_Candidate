@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 
 function AboutUsClient() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="image-client">
       {/* {/ Navigation Header /} */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
         <div className="container-fluid">
-          <Link className="navbar-brand" to='/ '>
+          <Link className="navbar-brand" to="/">
             <img src="assets/img/rivetcare_logo.png" alt="Rivet Care Logo" />
           </Link>
-          <ul className="nav-links">
-            <li><a href="/" className="nav-link ">Home</a></li>
-            <li><a href="AboutUsClient" className="nav-link active">About Us</a></li>
-            <li><a href="ContactUsClient" className="nav-link ">Contact Us</a></li>
-          </ul>
-          <div className="nav-auth">
-            <a href="GetStarted" className="nav-auth-link">Sign in / Sign up</a>
-            <a href="creatyouraccount" className="nav-post-job">Employer/Post Job</a>
+          {/* Hamburger Icon for Mobile Screens */}
+          <button className="hamburger-icon" onClick={toggleMenu}>
+            <i className="fa fa-bars"></i>
+          </button>
+          {/* Navigation Links */}
+          <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+            <ul className="nav-links">
+              <li><Link to={'/'} className="nav-link ">Home</Link></li>
+              <li><Link to={'/AboutUsClient'} className="nav-link active">About Us</Link></li>
+              <li><Link to={'/ContactUsClient'} className="nav-link">Contact Us</Link></li>
+            </ul>
+            <div className="nav-auth">
+              <Link to={'/GetStarted'} className="nav-auth-link">Sign in / Sign up</Link>
+              <Link to={'/ClientCreateAC'} className="nav-post-job">Employer/Post Job</Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -104,7 +117,7 @@ function AboutUsClient() {
           </div>
 
           <div className='aboutus-why-register'>
-            <h3 style={{paddingBottom:'11px'}}>Get Started with Rivet Jobs Today</h3>
+            <h3 style={{ paddingBottom: '11px' }}>Get Started with Rivet Jobs Today</h3>
             <span>Join Rivet Jobs today and unlock a world of opportunities. Whether you're a healthcare professional eager to advance your career or an employer in need of reliable staff, Rivet Jobs is the trusted platform that bridges the gap between talent and opportunity.</span>
           </div>
         </div>
@@ -114,10 +127,10 @@ function AboutUsClient() {
       <div className="footer-home">
         <ul className="footer-links">
           <li>&copy; 2024 Rivet Jobs</li>
-          <li><a href="#">Anti-Slavery statement</a></li>
-          <li><a href="#">Accessibility at Rivet Jobs</a></li>
-          <li><a href="#">Privacy Centre and Ad Choices</a></li>
-          <li><a href="#">Terms</a></li>
+          <li><Link to={'/'} href="#">Anti-Slavery statement</Link></li>
+          <li><Link to={'/'} href="#">Accessibility at Rivet Jobs</Link></li>
+          <li><Link to={'/'} href="#">Privacy Centre and Ad Choices</Link></li>
+          <li><Link to={'/'} href="#">Terms</Link></li>
         </ul>
       </div>
     </div>

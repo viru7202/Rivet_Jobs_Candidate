@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
-
 
 const Application4 = () => {
   const [formData, setFormData] = useState({
@@ -249,23 +247,22 @@ const Application4 = () => {
                       </div>
                     ))}
 
-<div className="row">
-                            {/* <div className="col-md-2"></div> */}
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                    <button>Save</button>
-                                </div>
+<div className="edidprofile-buttons">
+                        <div className="row">
+                          <div className="col-md-2"></div>
+                          <div className="col-md-4">
+                            <div className="editprofile-button">
+                              <button>Save</button>
                             </div>
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                <Link to="/ApplicationForm5">
-
-                                    <button>Next</button>
-                                    </Link>
-                                </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="editprofile-button">
+                              <button>Next</button>
                             </div>
-                            {/* <div className="col-md-2"></div> */}
+                          </div>
+                          <div className="col-md-2"></div>
                         </div>
+                      </div>
                   </div>
                 </div>
               </div>

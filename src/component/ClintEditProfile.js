@@ -19,7 +19,7 @@ import Navbar from './Navbar';
           <div className="row">
             <div className="col-md-6">
               <div className="email-text">
-                <h4>Email address</h4>
+                <h4>Branch Name</h4>
               </div>
               <div className="email-input">
                 <input
@@ -39,7 +39,7 @@ import Navbar from './Navbar';
             </div>
             <div className="col-md-6">
               <div className="email-text">
-                <h4>Telephone number</h4>
+                <h4>Company Reg. Number</h4>
               </div>
               <div className="email-input">
                 <input type="text" placeholder="Please Enter Branch"></input>
@@ -72,13 +72,13 @@ import Navbar from './Navbar';
 
 
           <div className="heding-profile edit-profile">
-            <h3>Edit Head Office Contact</h3>
+            <h3>Head Office Details</h3>
        
           </div>
           <div className="row">
             <div className="col-md-6">
               <div className="email-text">
-                <h4>Email address</h4>
+                <h4>Name of Procurement Manager</h4>
               </div>
               <div className="email-input">
                 <input
@@ -87,7 +87,7 @@ import Navbar from './Navbar';
                 ></input>
               </div>
               <div className="email-text">
-                <h4>Position</h4>
+                <h4>Telephone number</h4>
               </div>
               <div className="email-input">
                 <input
@@ -98,7 +98,7 @@ import Navbar from './Navbar';
             </div>
             <div className="col-md-6">
               <div className="email-text">
-                <h4>Telephone number</h4>
+                <h4>Email address</h4>
               </div>
               <div className="email-input">
                 <input type="text" placeholder="Please Enter Branch"></input>
@@ -112,7 +112,7 @@ import Navbar from './Navbar';
             </div>
 
             <div className="email-text">
-              <h4>Address</h4>
+              <h4>Address Line 1</h4>
             </div>
             <div className="email-input">
               {/* <input type="textarea" placeholder="Please Enter Postcode"></input> */}

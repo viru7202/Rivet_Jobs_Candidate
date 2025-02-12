@@ -1,8 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar';
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-
 
  function FindYourDreamjob() {
     const navigate = useNavigate();
@@ -30,12 +28,9 @@ import { Link } from "react-router-dom";
                 </div>
                 <div className="search-button">
                   {/* Pass the handleClick function to onClick */}
-              <Link to='/webpage2'>
-
                   <button data-id="model" data-target="#model" onClick={handleClick}>
                     Find Job
                   </button>
-                  </Link>
                 </div>
               </div>
             </div>

@@ -5,11 +5,8 @@ export default function CandidateCompliance() {
     return (
         <>
             <Navbar />
-            <div className="container">
-                <h2 className='head-title'>Compliance-Documents</h2>
-                </div>
             <div className='main'>
-
+                <h2 className='head-title'>Compliance-Documents</h2>
                 <div className='con-main'>
                     <div className='compliance-title'>
                         <h2 className='upload-title'>Upload Your Compliance</h2>

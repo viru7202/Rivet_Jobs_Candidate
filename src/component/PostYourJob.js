@@ -6,56 +6,61 @@ function PostYourJob() {
 
     return (
         <div>
+
             <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to='/webdeshbord'><img src="assets/img/rivetcare_logo.png" alt="" /></Link>
-                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button> */}
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        </ul>
+                    <Link className="navbar-brand" to='/'><img src="assets/img/rivetcare_logo.png" alt="" /></Link>
+
+                    <div className="nav-bar-top-section">
                         <div className="notification">
                             <i class="fa-regular fa-bell" style={{ color: '#1d71b7' }}></i>
                         </div>
-                        <div className="ref-bt">
-                            <button className="ref-btt">
-                                <img src="Vector (12).png" alt="" style={{ paddingRight: '10px' }} />
-                                <span style={{ position: "relative", top: '-2px' }}>
-                                Post a job</span>
-                            </button>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul> */}
+
+                            <div className="ref-bt">
+                                <button className="ref-btt">
+                                    <img src="Vector (12).png" alt="" style={{ paddingRight: '10px' }} />
+                                    <span style={{ position: "relative", top: '-2px' }}>
+                                        Post a job</span>
+                                </button>
+                            </div>
+
+                            <form className="d-flex" role="search">
+                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li className="nav-item dropdown">
+                                        <Link to={'/'} className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div className="profilenav">
+                                                <div className="pic">
+                                                    <img src="assets/img/provider/provider-02.jpg" alt="" />
+                                                </div>
+                                                <div className="profiletext">
+                                                    <h6><b>John Smith</b></h6>
+                                                    <p>Demo user</p>
+                                                </div>
+                                                <div className="aero"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                        </Link>
+                                        <ul className="dropdown-menu">
+                                            <li><NavLink className="dropdown-item" to="/candidateprofile"><i class="fa-solid fa-user"></i>Profile</NavLink></li>
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</NavLink></li>
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-users"></i>Interview</NavLink></li>
+
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-gear"></i>Setting</NavLink></li>
+                                            <li><Link to={'/'} className="dropdown-item" ><i class="fa-solid fa-right-from-bracket"></i>Sign out</Link></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
-
-                        <form className="d-flex" role="search">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div className="profilenav">
-                                            <div className="pic">
-                                                <img src="assets/img/provider/provider-02.jpg" alt="" />
-                                            </div>
-
-                                            <div className="profiletext">
-                                                <h6><b>John Smith</b></h6>
-                                                <p>Demo user</p>
-                                            </div>
-                                            <div className="aero"><i class="fa-solid fa-caret-down"></i></div>
-                                        </div>
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li><NavLink className="dropdown-item" to="/candidateprofile"><i class="fa-solid fa-user"></i>Profile</NavLink></li>
-                                        <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</NavLink></li>
-                                        <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-users"></i>Interview</NavLink></li>
-
-                                        <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-gear"></i>Setting</NavLink></li>
-                                        <li><a className="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Sign out</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </form>
                     </div>
                 </div>
             </nav>
+
             <div className="container">
                 <div className="dashbord-text">
                     <h3>Permanent Jobs</h3>
@@ -75,7 +80,7 @@ function PostYourJob() {
                         <div className="search-button">
                             {/* Pass the handleClick function to onClick */}
                             <button data-id="model" data-target="#model">
-                            <i class="fa-solid fa-magnifying-glass"></i>  Find Job
+                                <i class="fa-solid fa-magnifying-glass"></i>  Find Job
                             </button>
                         </div>
                     </div>
@@ -89,25 +94,14 @@ function PostYourJob() {
                 <img src="assets/img/Group 1414.png" alt="" />
             </div>
             <style jsx>{`
-       .ref-btt {
-           backdrop-filter: blur(5px);
-          background: #1D71B7;
-          border: none;
-          border-radius: 10px;
-          width: 167px;
-          height: 42px;
-          color: #FFFFFF;
-          font-size: 14px;
-          line-height: 16.41px;
-          font-weight: 700;
-        }
+ 
       button.ref-btt {
-    background: #1D71B7;
+ background: #1D71B7;
     border: none;
     border-radius: 10px;
-    width: 150px;
-    height: 42px;
-        color: #FFFFFF;
+    width: 140px;
+    height: 55px;
+    color: #FFFFFF;
     font-size: 14px;
     line-height: 16.41px;
     font-weight: 700;

@@ -90,7 +90,7 @@ function ClientCreateAC() {
             </Link>
            
             <div className="ac-sign">
-              <p>Already have an account ? <a href="/login">Sign in</a></p>
+              <p>Already have an account ? <Link to="/loginscreen">Sign in</Link></p>
             </div>
             <hr />
           </div>

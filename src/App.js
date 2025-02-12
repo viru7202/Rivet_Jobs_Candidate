@@ -86,7 +86,7 @@ import LocamjobVacancies from "./component/LocamjobVacancies";
 import Marketplace from "./component/Marketplace";
 import LocamjobAppliedCandidates from "./component/LocamjobAppliedCandidates";
 import ClientCreateAC from "./component/ClientCreateAC";
-import ClientuserProfile from "./component/ClientuserProfile";  
+import ClientuserProfile from "./component/ClientuserProfile";
 import CltDashboard from "./component/CltDashboard";
 import CdtvacancyDashboard from "./component/CdtvacancyDashboard";
 import AddQuestion from "./component/AddQuestion";
@@ -108,8 +108,9 @@ import Invoice from "./component/Invoice";
 import Calendar from "./component/Celendar";
 import CandidateInterviewSelectDateCalender from "./component/CandidateInterviewSelectDateCalender";
 import CandidateAvailabilityCalander from "./component/CandidateAvailabilityCalander";
-import CandidateTime3 from "./component/CandidateTime3";
-
+import CustomCalendar from "./component/CustomCalendar";
+import InterviewDateSelectionCalender from "./component/InterviewDateSelectionCalender";
+import CandidateTimeSheet from "./component/CandidateTimeSheet";
 
 function App() {
   return (
@@ -117,115 +118,139 @@ function App() {
       {/* <Navbar /> */}
       {/* <Saidbar /> */}
       <Routes>
-      <Route path="/" element={<HomeClient />} />
+
+        {/* login_Sighup */}
         <Route path="/GetStarted" element={<GetStarted />} />
+        <Route path="/loginscreen" element={<LoginScreen />} />
+        <Route path="/ClientCreateAC" element={<ClientCreateAC />} />
+        <Route path="/creatyouraccount" element={<CreatYourAccount />} />
         <Route path="/emailverification" element={<EmailVerification />} />
         <Route path="/contectverification" element={<ContectVerification />} />
         <Route path="/otpverification" element={<OtpVerification />} />
-        <Route path="/creatyouraccount" element={<CreatYourAccount />} />
-        <Route path="/verifyyouremail" element={<VerifyYourEmail />} />
-        <Route path="/verifyyourphone" element={<VerifyYourPhone />} />
-        <Route path="/otpsignup" element={<OtpSignup />} />
-        <Route path="/webdeshbord" element={<WebDashbord />} />
-        <Route path="/webpage1" element={<Webpage1 />} />
-        <Route path="/webpage2" element={<Webpage2 />} />
-        <Route path="/editprofile" element={<EditProfile />} />
-        <Route path="/webpage3" element={<Webpage3 />} />
-        <Route path="/candidateprofile" element={<CandidateProfile />} />
-        <Route path="/editprofile" element={<EditProfile />} />
-        <Route path="/clintwebpage1" element={<ClintWebPage1 />} />
-        <Route path="/clintwebpage2" element={<ClintWebPage2 />} />
-        <Route path="/candidatecompliance" element={<CandidateCompliance />} />
-        <Route path="/webpage4" element={<Webpage4 />} />
-        <Route path="/clientprofile" element={<ClientProfile />} />
-        <Route path="/candidatescompliancelist" element={<CandidatesComplianceList />} />
-        <Route path="/clinteditprofile" element={<ClintEditProfile />} />
-        <Route path="/complianceoverview" element={<ComplianceOverView />} />
-        <Route path="/clientdetailview" element={<ClientDetailView />} />
-        <Route path="/addjobbasics" element={<AddJobBasics />} />
-        <Route path="/keyqualification" element={<KeyQualification />} />
-        <Route path="/review" element={<Review />} />
-        <Route path="/healthassistant" element={<HealthAssistant />} />
-        <Route path="/describethejob" element={<DescribetheJob />} />
-        <Route path="/setpreferences" element={<SetPreferences />} />
-        <Route path="/webpage5" element={<Webpage5 />} />
-        <Route path="/clientdashbord" element={<ClientDashbord />} />
-        <Route path="/locamjobdetails" element={<LocamJobDetails />} />
-        <Route path="/locampostjob" element={<LocamPostjob />} />
-        <Route path="/addshifttimeandpay" element={<AddShiftTimeandPay />} />
-        <Route path="/addcreatorandnumberofpositions" element={<AddCreatorandNumberofPositions/>} />
-        <Route path="/vacancies" element={<Vacancies />} />
-        {/* <Route path="/upcominginterview" element={<UpcomingInterview />} /> */}
-        <Route path="/pastinterview" element={<PastInterview />} />
-        <Route path="/findyourdreamjob" element={<FindYourDreamjob />} />
-        <Route path="/PayrollInformation" element={<PayrollInformation />} />
-        <Route path="/Applicationformcdt" element={<Applicationformcdt />} />
-        <Route path="/Clientbooking" element={<Clientbooking />} />
+
+
+        {/* Front_Screen */}
+        <Route path="/" element={<HomeClient />} />
         <Route path="/AboutUsClient" element={<AboutUsClient />} />
         <Route path="/ContactUsClient" element={<ContactUsClient />} />
-        <Route path="booking" element={<Booking />} />
-        <Route path="LocamAddjobDetails" element={<LocamAddjobDetails />} />
-        <Route path="CreateYourAccount" element={<CreateYourAccount />} />
+        <Route path="/CltDashboard" element={<CltDashboard />} />
+        <Route path="/Notification" element={<Notification />} />
+        <Route path="/Marketplace" element={<Marketplace />} />
 
-        <Route path="employmenthistory" element={<EmploymentHistory />} />
-        <Route path="payslip" element={<Payslip />} />
-        <Route path="candidatemyjobs1" element={<CandidateMyjobs1 /> } />
-        <Route path="loginscreen" element={<LoginScreen />} />
-        <Route path="Reason" element={<Reason />} />
-        <Route path="ApplicationForm1" element={<ApplicationForm1 />} />
+        {/*     client       */}
+        <Route path="/ReferredCompany" element={<ReferredCompany />} />
+        <Route path="/Cdtreview" element={<Cdtreview />} />
+        <Route path="/ClientuserProfile" element={<ClientuserProfile />} />
+        <Route path="/clinteditprofile" element={<ClintEditProfile />} />
+        <Route path="/addClint" element={<AddClint />} />
+        <Route path="/clientdashbord" element={<ClientDashbord />} />
 
-        <Route path="Notification" element={<Notification /> } />
-        <Route path="CdtDashboard" element={<CdtDashboard /> } />
-        <Route path="Vacanciesdetail" element={<Vacanciesdetail /> } />
-        <Route path="Application1" element={<Application1 /> } />
-        <Route path="ApplicationForm2" element={<ApplicationForm2 /> } />
-        <Route path="ApplicationForm3" element={<ApplicationForm3 /> } />
-        <Route path="Application4" element={<Application4 /> } />
-        <Route path="ApplicationForm5" element={<ApplicationForm5 /> } />
-        <Route path="ApplicationForm6" element={<ApplicationForm6 /> } />
-        <Route path="ApplicationForm7" element={<ApplicationForm7 /> } />
+                  {/* Add Permanent Job Cleint */}
+        <Route path="/addjobbasics" element={<AddJobBasics />} />
+        <Route path="/webpage5" element={<Webpage5 />} />
+        <Route path="/describethejob" element={<DescribetheJob />} />
+        <Route path="/setpreferences" element={<SetPreferences />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/keyqualification" element={<KeyQualification />} />
+        <Route path="/AddQuestion" element={<AddQuestion />} />
+        <Route path="/healthassistant" element={<HealthAssistant />} />
 
-        <Route path="ReferredCompany" element={<ReferredCompany />} />
-        <Route path="CandidateTime1" element={<CandidateTime1 /> } />
-        <Route path="CandidateTime2" element={<CandidateTime2 /> } />
-        <Route path="CandidateTime3" element={<CandidateTime3 /> } />
+                  {/* Permanent Job Screens Client */}
+        <Route path="/PostYourJob" element={<PostYourJob />} />
+        <Route path="/ClientSorry" element={<ClientSorry />} />
+        <Route path="/clintwebpage2" element={<ClintWebPage2 />} />
+        <Route path="/ClientActiveList" element={<ClientActiveList />} />
+        <Route path="/ClientCandidateDetail" element={<ClientCandidateDetail />} />
+        <Route path="/CandidateInterviewSelectDateCalender" element={<CandidateInterviewSelectDateCalender />} />
+        <Route path="/CandidateAvailabilityCalander" element={<CandidateAvailabilityCalander />} />
+        <Route path="/ClientInterview" element={<ClientInterview />} />
+
+                {/* Locum Job Screens Client */}
+        <Route path="/locamjobvacancies" element={<LocamjobVacancies />} />
+        <Route path="/LocamjobAppliedCandidates" element={<LocamjobAppliedCandidates />} />
+        <Route path="/LocamjobCandidateDetail" element={<LocamjobCandidateDetail />} />
+        <Route path="/locambestmatchcandidates" element={<LocamjobBestMatchCandidates />} />
+        <Route path="/LocamSelectedCandidates" element={<LocamSelectedCandidates />} />
+        <Route path="/LocamjobCandidateDetail_2" element={<LocamjobCandidateDetail_2 />} />
+        <Route path="/LocamRejectedCandidates" element={<LocamRejectedCandidates />} />
+
+                  {/* Add Locum Jobs Screens */}
+        <Route path="/ClientAddVacancies" element={<ClientAddVacancies />} />
+        <Route path="/addshifttimeandpay" element={<AddShiftTimeandPay />} />
+        <Route path="/addcreatorandnumberofpositions" element={<AddCreatorandNumberofPositions />} />
+
+                 {/* Booking Client Screens */} 
+        <Route path="/Clientbooking" element={<Clientbooking />} />
+
+                {/* TimeSheet Client Screens */}
+        <Route path="/ClientTime1" element={<ClientTime1 />} />
+        <Route path="/ClientTime2" element={<ClientTime2 />} />
+        <Route path="/ClientTimesheet" element={<ClientTimesheet />} />
+
+        {/* Invoice Client Screens */}
+        <Route path="/ClientInvoice" element={<ClientInvoice />} />
+        <Route path="/invoice" element={<Invoice />} />
 
 
-        <Route path="ClientTime1" element={<ClientTime1 />} />
-        <Route path="Locam1" element={<Locam1 /> } />
-        <Route path="CompanyCdtDoc" element={<CompanyCdtDoc /> } />
-        <Route path="MandatoryTrainings" element={<MandatoryTrainings /> } />
-        <Route path="CandidateReferredFriends" element={<CandidateReferredFriends /> } />
-        <Route path="Cdtreview" element={<Cdtreview /> } />
-        <Route path="addClint" element={<AddClint /> } />
-        <Route path="locamjobvacancies" element={<LocamjobVacancies /> } />
-        <Route path="Marketplace" element={<Marketplace /> } />
-        <Route path="LocamjobAppliedCandidates" element={<LocamjobAppliedCandidates /> } />
-        <Route path="ClientCreateAC" element={<ClientCreateAC /> } />
-        <Route path="ClientuserProfile" element={<ClientuserProfile /> } />
-        <Route path="CltDashboard" element={<CltDashboard /> } />
-        <Route path="CdtvacancyDashboard" element={<CdtvacancyDashboard /> } />
-        <Route path="AddQuestion" element={<AddQuestion /> } />
-        <Route path="ClientTime2" element={<ClientTime2 /> } />
-        <Route path="ClientTimesheet" element={<ClientTimesheet /> } />
-        <Route path="ClientAddVacancies" element={<ClientAddVacancies /> } />
-        <Route path="LocamjobCandidateDetail" element={<LocamjobCandidateDetail /> } />
-        <Route path="LocamjobCandidateDetail_2" element={<LocamjobCandidateDetail_2 /> } />
-        <Route path="locambestmatchcandidates" element={<LocamjobBestMatchCandidates /> } />
-        <Route path="LocamSelectedCandidates" element={<LocamSelectedCandidates /> } />
-        <Route path="LocamRejectedCandidates" element={<LocamRejectedCandidates /> } />
-        <Route path="ClientInterview" element={<ClientInterview /> } />
-        <Route path="ClientCandidateDetail" element={<ClientCandidateDetail /> } />
+        {/*    Candidate    */}
+        <Route path="/clientprofile" element={<ClientProfile />} />
+        <Route path="/cndidateReferredfiends" element={<CandidateReferredFriends />} />
+        <Route path="/candidateprofile" element={<CandidateProfile />} />
+        <Route path="/editprofile" element={<EditProfile />} />
+        <Route path="/candidate-dashboard" element={<CdtDashboard />} />
+        <Route path="/ctvacancydshboard" element={<CdtvacancyDashboard />} />
+        <Route path="/vacancies" element={<Vacancies />} />
+        <Route path="/Vacanciesdetail" element={<Vacanciesdetail />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/candidatetime1" element={<CandidateTime1 />} />
+        <Route path="/candidatetime2" element={<CandidateTime2 />} />
+        <Route path="/candidatetimesheet" element={<CandidateTimeSheet />} />
+        <Route path="/companycdtDoc" element={<CompanyCdtDoc />} />
+        <Route path="/employmenthistory" element={<EmploymentHistory />} />
+        <Route path="/mandatorytrainings" element={<MandatoryTrainings />} />
+        <Route path="/payrollinformation" element={<PayrollInformation />} />
+        <Route path="/aplicationformcdt" element={<Applicationformcdt />} />
+        <Route path="/findyourdreamjob" element={<FindYourDreamjob />} />
+        <Route path="/webpage2" element={<Webpage2 />} />
+        <Route path="/webpage3" element={<Webpage3 />} />
+        <Route path="/webpage1" element={<Webpage1 />} />
+        <Route path="/candidatemyjobs1" element={<CandidateMyjobs1 />} />
+        <Route path="/payslip" element={<Payslip />} />
+        <Route path="/pastinterview" element={<PastInterview />} />
+        <Route path="/aplicationForm1" element={<ApplicationForm1 />} />
+        <Route path="/aplicationForm2" element={<ApplicationForm2 />} />
+        <Route path="/aplicationForm3" element={<ApplicationForm3 />} />
+        <Route path="/aplication4" element={<Application4 />} />
+        <Route path="/aplicationForm5" element={<ApplicationForm5 />} />
+        <Route path="/aplicationForm6" element={<ApplicationForm6 />} />
+        <Route path="/aplicationForm7" element={<ApplicationForm7 />} />
+        <Route path="/interviewdateselectioncalender" element={<InterviewDateSelectionCalender />} />
 
-        <Route path="ClientInvoice" element={<ClientInvoice /> } />
-        <Route path="PostYourJob" element={<PostYourJob /> } />
-        <Route path="ClientSorry" element={<ClientSorry /> } />
-        <Route path="ClientActiveList" element={<ClientActiveList /> } />
-        <Route path="invoice" element={<Invoice /> } />
-        <Route path="CandidateInterviewSelectDateCalender" element={<CandidateInterviewSelectDateCalender /> } />
-        <Route path="CandidateAvailabilityCalander" element={<CandidateAvailabilityCalander /> } />
-        <Route path="Celendar" element={<Calendar /> } />
 
+
+
+        {/* <Route path="/verifyyouremail" element={<VerifyYourEmail />} /> */}
+        {/* <Route path="/verifyyourphone" element={<VerifyYourPhone />} /> */}
+        {/* <Route path="/otpsignup" element={<OtpSignup />} /> */}
+        <Route path="/webdeshbord" element={<WebDashbord />} />
+        {/* <Route path="/editprofile" element={<EditProfile />} /> */}
+        <Route path="/clintwebpage1" element={<ClintWebPage1 />} />
+        <Route path="/candidatecompliance" element={<CandidateCompliance />} />
+        <Route path="/webpage4" element={<Webpage4 />} />
+        <Route path="/candidatescompliancelist" element={<CandidatesComplianceList />} />
+        <Route path="/complianceoverview" element={<ComplianceOverView />} />
+        <Route path="/clientdetailview" element={<ClientDetailView />} />
+        <Route path="/locamjobdetails" element={<LocamJobDetails />} />
+        <Route path="/locampostjob" element={<LocamPostjob />} />
+        {/* <Route path="/upcominginterview" element={<UpcomingInterview />} /> */}
+        <Route path="/LocamAddjobDetails" element={<LocamAddjobDetails />} />
+        <Route path="/CreateYourAccount" element={<CreateYourAccount />} />
+        <Route path="/Reason" element={<Reason />} />
+        <Route path="/Application1" element={<Application1 />} />
+        <Route path="/Locam1" element={<Locam1 />} />
+        <Route path="/Celendar" element={<Calendar />} />
+        <Route path="/customcelendar" element={<CustomCalendar />} />
+        
 
         {/*     Panel     */}
         <Route path="/createadmin" element={<CreateAdmin />} />\

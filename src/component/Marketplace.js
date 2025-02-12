@@ -1,16 +1,12 @@
 import React from 'react';
 import Navbar from "./Navbar";
-
-
+import { Link } from "react-router-dom";
 
 function Marketplace() {
-
-
-
     return (
         <div>
             <Navbar />
-            <div className="dashbord-text">
+            <div className="container dashbord-text">
                 <h3>Market place</h3>
             </div>
 
@@ -55,7 +51,7 @@ function Marketplace() {
                         </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                        <tr>
                             <td>1</td>
                             <td class="your-class-name">Smith Lorem Ipsum
                             </td>
@@ -63,16 +59,16 @@ function Marketplace() {
                             <td>Denning House 1a, George Street, <br></br> Wolverhampton, England, WV2 4DP.</td>
                             <td><img src="rivet jobs icon 2.png" alt="" /></td>
                             <td>
-                                <a href="/path-to-pdf/Abcxyz.pdf" target="_blank" rel="noopener noreferrer" style={{paddingRight:'5px'}}>
+                                <Link to={'/path-to-pdf/Abcxyz.pdf'} target="_blank" rel="noopener noreferrer" style={{ paddingRight: '5px' }}>
                                     Abcxyz.pdf
-                                </a>{" "}
+                                </Link>{" "}
                                 <img src="Vector (8).png" alt="PDF Icon" />
                             </td>
                             <td>Management, Marketing, Law, Finance, <br></br> Training, Technical, Construction</td>
                             <td>
-                                Tel: <a href="tel:+912236547890">+91 2236547890</a> <br />
+                                Tel: <Link to={'/tel:+912236547890'}>+91 2236547890</Link> <br />
                                 Mail:{" "}
-                                <a href="mailto:info@rivetJobs.com">info@rivetJobs.com</a>
+                                <Link to={'/mailto:info@rivetJobs.com'}>info@rivetJobs.com</Link>
                             </td>
                         </tr>
 
@@ -84,16 +80,16 @@ function Marketplace() {
                             <td>Denning House 1a, George Street, <br></br> Wolverhampton, England, WV2 4DP.</td>
                             <td><img src="rivet jobs icon 2.png" alt="" /></td>
                             <td>
-                            <a href="/path-to-pdf/Abcxyz.pdf" target="_blank" rel="noopener noreferrer" style={{paddingRight:'5px'}}>
+                                <Link to={'/path-to-pdf/Abcxyz.pdf'} target="_blank" rel="noopener noreferrer" style={{ paddingRight: '5px' }}>
                                     Abcxyz.pdf
-                                </a>{" "}
+                                </Link>{" "}
                                 <img src="Vector (8).png" alt="PDF Icon" />
                             </td>
                             <td>Management, Marketing, Law, Finance, <br></br> Training, Technical, Construction</td>
                             <td>
-                                Tel: <a href="tel:+912236547890">+91 2236547890</a> <br />
+                                Tel: <Link to={'/tel:+912236547890'}>+91 2236547890</Link> <br />
                                 Mail:{" "}
-                                <a href="mailto:info@rivetJobs.com">info@rivetJobs.com</a>
+                                <Link to={'/mailto:info@rivetJobs.com'}>info@rivetJobs.com</Link>
                             </td>
                         </tr>
 
@@ -105,16 +101,16 @@ function Marketplace() {
                             <td>Denning House 1a, George Street, <br></br> Wolverhampton, England, WV2 4DP.</td>
                             <td><img src="rivet jobs icon 2.png" alt="" /></td>
                             <td>
-                            <a href="/path-to-pdf/Abcxyz.pdf" target="_blank" rel="noopener noreferrer" style={{paddingRight:'5px'}}>
+                                <Link to={'/path-to-pdf/Abcxyz.pdf'} target="_blank" rel="noopener noreferrer" style={{ paddingRight: '5px' }}>
                                     Abcxyz.pdf
-                                </a>{" "}
+                                </Link>{" "}
                                 <img src="Vector (8).png" alt="PDF Icon" />
                             </td>
                             <td>Management, Marketing, Law, Finance, <br></br> Training, Technical, Construction</td>
                             <td>
-                                Tel: <a href="tel:+912236547890">+91 2236547890</a> <br />
+                                Tel: <Link to={'/tel:+912236547890'}>+91 2236547890</Link> <br />
                                 Mail:{" "}
-                                <a href="mailto:info@rivetJobs.com">info@rivetJobs.com</a>
+                                <Link to={'/mailto:info@rivetJobs.com'}>info@rivetJobs.com</Link>
                             </td>
                         </tr>
 
@@ -126,16 +122,16 @@ function Marketplace() {
                             <td>Denning House 1a, George Street, <br></br> Wolverhampton, England, WV2 4DP.</td>
                             <td><img src="rivet jobs icon 2.png" alt="" /></td>
                             <td>
-                            <a href="/path-to-pdf/Abcxyz.pdf" target="_blank" rel="noopener noreferrer" style={{paddingRight:'5px'}}>
+                                <Link to={'/path-to-pdf/Abcxyz.pdf'} target="_blank" rel="noopener noreferrer" style={{ paddingRight: '5px' }}>
                                     Abcxyz.pdf
-                                </a>{" "}
+                                </Link>{" "}
                                 <img src="Vector (8).png" alt="PDF Icon" />
                             </td>
                             <td>Management, Marketing, Law, Finance, <br></br> Training, Technical, Construction</td>
                             <td>
-                                Tel: <a href="tel:+912236547890">+91 2236547890</a> <br />
+                                Tel: <Link to={'/tel:+912236547890'}>+91 2236547890</Link> <br />
                                 Mail:{" "}
-                                <a href="mailto:info@rivetJobs.com">info@rivetJobs.com</a>
+                                <Link to={'/mailto:info@rivetJobs.com'}>info@rivetJobs.com</Link>
                             </td>
                         </tr>
                     </tbody>

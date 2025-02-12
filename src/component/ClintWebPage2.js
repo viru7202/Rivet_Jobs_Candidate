@@ -7,52 +7,58 @@ function ClintWebPage2() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbarweb">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to='/webdeshbord'><img src="assets/img/rivetcare_logo.png" alt="" /></Link>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <div className="notification">
-              <i class="fa-regular fa-bell" style={{ color: '#1d71b7' }}></i>
-            </div>
-            <div className="ref-bt">
-              <button className="ref-btt">
-                <img src="Vector (12).png" alt="" style={{ paddingRight: '10px' }} />
-                <span style={{ position: "relative", top: '-2px' }}>
-                  Post a job</span>
-              </button>
-            </div>
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to='/'><img src="assets/img/rivetcare_logo.png" alt="" /></Link>
 
-            <form className="d-flex" role="search">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item dropdown">
-                  <a className="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div className="profilenav">
-                      <div className="pic">
-                        <img src="assets/img/provider/provider-02.jpg" alt="" />
-                      </div>
+                    <div className="nav-bar-top-section">
+                        <div className="notification">
+                            <i class="fa-regular fa-bell" style={{ color: '#1d71b7' }}></i>
+                        </div>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul> */}
 
-                      <div className="profiletext">
-                        <h6><b>John Smith</b></h6>
-                        <p>Demo user</p>
-                      </div>
-                      <div className="aero"><i class="fa-solid fa-caret-down"></i></div>
+                            <div className="ref-bt">
+                                <button className="ref-btt">
+                                    <img src="Vector (12).png" alt="" style={{ paddingRight: '10px' }} />
+                                    <span style={{ position: "relative", top: '-2px' }}>
+                                        Post a job</span>
+                                </button>
+                            </div>
+
+                            <form className="d-flex" role="search">
+                                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li className="nav-item dropdown">
+                                        <Link to={'/'} className="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div className="profilenav">
+                                                <div className="pic">
+                                                    <img src="assets/img/provider/provider-02.jpg" alt="" />
+                                                </div>
+                                                <div className="profiletext">
+                                                    <h6><b>John Smith</b></h6>
+                                                    <p>Demo user</p>
+                                                </div>
+                                                <div className="aero"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                        </Link>
+                                        <ul className="dropdown-menu">
+                                            <li><NavLink className="dropdown-item" to="/candidateprofile"><i class="fa-solid fa-user"></i>Profile</NavLink></li>
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</NavLink></li>
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-users"></i>Interview</NavLink></li>
+
+                                            <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-gear"></i>Setting</NavLink></li>
+                                            <li><Link to={'/'} className="dropdown-item" ><i class="fa-solid fa-right-from-bracket"></i>Sign out</Link></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
                     </div>
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li><NavLink className="dropdown-item" to="/candidateprofile"><i class="fa-solid fa-user"></i>Profile</NavLink></li>
-                    <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</NavLink></li>
-                    <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-users"></i>Interview</NavLink></li>
-
-                    <li><NavLink className="dropdown-item" to="/clientprofile"><i class="fa-solid fa-gear"></i>Setting</NavLink></li>
-                    <li><a className="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Sign out</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </form>
-          </div>
-        </div>
-      </nav>
+                </div>
+            </nav>
       <div className="container">
         <div className="dashbord-text">
           <h3>Permanent Jobs</h3>
@@ -104,19 +110,19 @@ function ClintWebPage2() {
                         </button>
                         <ul className="dropdown-menu">
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -132,19 +138,19 @@ function ClintWebPage2() {
                         </button>
                         <ul className="dropdown-menu">
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -160,19 +166,19 @@ function ClintWebPage2() {
                         </button>
                         <ul className="dropdown-menu">
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -188,19 +194,19 @@ function ClintWebPage2() {
                         </button>
                         <ul className="dropdown-menu">
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="dropdown-item" href="#">
+                                   <Link to={'/'} className="dropdown-item" >
                                     Menu item
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -247,19 +253,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Open{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Expired{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                            Paused{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -267,6 +273,7 @@ function ClintWebPage2() {
                   <div className="col-md-1 menu-icon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
+                 
                 </div>
               </div>
             </div>
@@ -313,19 +320,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Open{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Expired{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                            Paused{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -333,6 +340,7 @@ function ClintWebPage2() {
                   <div className="col-md-1 menu-icon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -377,19 +385,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Open{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Expired{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                            Paused{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -444,19 +452,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Edit Job{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View job details{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View public job page{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -507,19 +515,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Edit Job{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View job details{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View public job page{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -571,19 +579,19 @@ function ClintWebPage2() {
                       </button>
                       <ul className="dropdown-menu lk">
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             Edit Job{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View job details{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                               <Link to={'/'} className="dropdown-item" >
                             View public job page{" "}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -617,18 +625,7 @@ function ClintWebPage2() {
  
     margin: 11px 0px 14px 0px;
 }
-       .ref-btt {
-           backdrop-filter: blur(5px);
-          background: #1D71B7;
-          border: none;
-          border-radius: 10px;
-          width: 167px;
-          height: 42px;
-          color: #FFFFFF;
-          font-size: 14px;
-          line-height: 16.41px;
-          font-weight: 700;
-        }
+    
       button.ref-btt {
     background: #1D71B7;
     border: none;

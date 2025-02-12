@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
-
 
 const ApplicationForm3 = () => {
   // States for each checkbox group
@@ -153,7 +151,7 @@ const ApplicationForm3 = () => {
                         <li>
                           <div className="checkbox-group-two">
                             <label className="is-add">
-                              Have you any pending or previous financial or civil actions brought against you? If ‘yes’ to
+                              Have you any pending or previous financial or civil actions brought against you? <br />If ‘yes’ to
                               any of the above, please explain and include any current restrictions to your professional
                               registration below:
                             </label>
@@ -197,6 +195,7 @@ const ApplicationForm3 = () => {
                     {/* RTW Status */}
                     <div className="form-line"></div>
                     <div className="form-box">
+                      <h3 className="form-subheading">Section 6: Right to Work (RTW) in the UK</h3>
                       <div className="form-group">
                         <div className="checkbox-group-two">
                           <label className="is-add is-align">What is your RTW status in the UK?</label>
@@ -264,40 +263,328 @@ const ApplicationForm3 = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                      <div className="form-row is-space">
+                        <div className="form-group">
+                          <label htmlFor="currentJobTitle">*Visa type :</label>
+                          <input
+                            type="text"
+                            id="currentJobTitle"
+                            name="currentJobTitle"
+                            placeholder="Xyz Abc"
 
-                    {/* Form Rows for Current Job */}
-                    {/* ... you can continue this form section similarly ... */}
-                  </div>
-                  <div className="edidprofile-buttons">
-                        <div className="row">
-                            {/* <div className="col-md-2"></div> */}
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                    <button>Save</button>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                <Link to="/Application4">
-
-                                    <button>Next</button>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* <div className="col-md-2"></div> */}
+                          />
                         </div>
+                        <div className="form-group">
+                          <label htmlFor="currentPlaceOfWork">* Visa expiry :</label>
+                          <input
+                            type="text"
+                            id="currentPlaceOfWork"
+                            name="currentPlaceOfWork"
+                            placeholder="05/2025"
+
+                          />
+                        </div>
+                      </div>
+                      <div className="form-row">
+                        <div className="form-group is-width">
+                          <label htmlFor="specialtyDetails">*Visa restrictions:</label>
+                          <input
+                            type="text"
+                            id="specialtyDetails"
+                            name="specialtyDetails"
+                            placeholder="Xyz Abc"
+
+                          />
+                        </div>
+                      </div>
                     </div>
+                    <div className="form-line"></div>
+                    <div className="form-box">
+                      <h3 className="form-subheading">Section 7: Criminal Record Check (Please refer to point 1 at the end of this form for further information)</h3>
+                      <p className="form-text">Disclosure and Barring Service (Access NI) the Rehabilitation of Offenders Exceptions Order 1975 (2013) (England and Wales)</p>
+                      <p className="form-text">*For health and social care workers applying to work in Scotland you will need to complete an additional form. Please ask your RIVET JOBS representative for a copy of this form.</p>
+                      <div className="form-group">
+
+
+                        <ol className="is-ol" type="1">
+                          <li>
+                            <label>Access NI check required for role (confirmed with RIVET JOBS representative for job role type applied):</label>
+                            <div className="form-group" id="checkbox-groupbox-two">
+                              {['Enhanced with barred list check', 'Enhanced not on the barred list', 'Standard'].map(area => (
+                                <div className="checkbox-group" key={area}>
+                                  <input
+                                    type="checkbox"
+                                    value={area}
+                                    onChange={handleCheckboxChange}
+                                  />
+                                  <label>{area}</label>
+                                </div>
+                              ))}
+                            </div>
+                          </li>
+                          {/* Question 1 */}
+                          <li>
+                            <div className="checkbox-group-two">
+                              <label className="is-add">
+                                Access NI Update Service - registered with appropriate Access NI level and workforce type :
+                              </label>
+                              <div className="checkbox-flex">
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="yes"
+                                    name="working"
+                                    value="yes"
+                                    checked={isRiskChecked.yes}
+                                    onChange={() =>
+                                      setIsRiskChecked({ yes: !isRiskChecked.yes, no: false })
+                                    }
+                                  />
+                                  <label htmlFor="yes">Yes</label>
+                                </div>
+
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="no"
+                                    name="working"
+                                    value="no"
+                                    checked={isRiskChecked.no}
+                                    onChange={() =>
+                                      setIsRiskChecked({ yes: false, no: !isRiskChecked.no })
+                                    }
+                                  />
+                                  <label htmlFor="no">Not registered</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="form-group-two">
+                              <label htmlFor="accountHolderName">Account Holder Name:</label>
+                              <input
+                                type="text"
+                                placeholder="ABC XYZ"
+                              />
+                            </div>
+                          </li>
+
+
+                          {/* Question 2 */}
+                          <li>
+                            <div className="checkbox-group-two">
+                              <label className="is-add">
+                                For enhanced with or without barred list/Standard Access NI check: Do you have any convictions, cautions, reprimands, warnings or additional information that are not ‘protected’ as defined by the Rehabilitation of Offenders Act 1974 (Exceptions) Order 1975 (as amended in 2013)?
+                              </label>
+                              <div className="checkbox-flex">
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="yes"
+                                    name="working"
+                                    value="yes"
+                                    checked={isSuspendedChecked.yes}
+                                    onChange={() =>
+                                      setIsSuspendedChecked({ yes: !isSuspendedChecked.yes, no: false })
+                                    }
+                                  />
+                                  <label htmlFor="yes">Yes</label>
+                                </div>
+
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="no"
+                                    name="working"
+                                    value="no"
+                                    checked={isSuspendedChecked.no}
+                                    onChange={() =>
+                                      setIsSuspendedChecked({ yes: false, no: !isSuspendedChecked.no })
+                                    }
+                                  />
+                                  <label htmlFor="no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          {/* Question 3 */}
+                          <li>
+                            <div className="checkbox-group-two">
+                              <label className="is-add">
+                                Are you aware of any previous, current or pending investigations, police enquiries or legal proceedings following allegations made against you (in the UK or any other country)?
+                              </label>
+                              <div className="checkbox-flex">
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="yes"
+                                    name="working"
+                                    value="yes"
+                                    checked={isInvestigatedChecked.yes}
+                                    onChange={() =>
+                                      setIsInvestigatedChecked({ yes: !isInvestigatedChecked.yes, no: false })
+                                    }
+                                  />
+                                  <label htmlFor="yes">Yes</label>
+                                </div>
+
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="no"
+                                    name="working"
+                                    value="no"
+                                    checked={isInvestigatedChecked.no}
+                                    onChange={() =>
+                                      setIsInvestigatedChecked({ yes: false, no: !isInvestigatedChecked.no })
+                                    }
+                                  />
+                                  <label htmlFor="no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          {/* Question 4 */}
+                          <li>
+                            <div className="checkbox-group-two">
+                              <label className="is-add">
+                                For temporary workers who will be working in Scotland only (PVG Scheme – Disclosure Scotland): <br />     Do you have any spent or unspent convictions?
+                                <br />      If answered ‘yes’ to any of the above, please provide details in your own words below  </label>
+                              <div className="checkbox-flex">
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="yes"
+                                    name="working"
+                                    value="yes"
+                                    checked={isFinancialChecked.yes}
+                                    onChange={() =>
+                                      setIsFinancialChecked({ yes: !isFinancialChecked.yes, no: false })
+                                    }
+                                  />
+                                  <label htmlFor="yes">Yes</label>
+                                </div>
+
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="no"
+                                    name="working"
+                                    value="no"
+                                    checked={isFinancialChecked.no}
+                                    onChange={() =>
+                                      setIsFinancialChecked({ yes: false, no: !isFinancialChecked.no })
+                                    }
+                                  />
+                                  <label htmlFor="no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="is-margin">
+                              <input type="text" placeholder="Xyz Abc" />
+                            </div>
+                          </li>
+                        </ol>
+                        <p className="form-text">Overseas Police Checks (Please refer to point 2 at the end of this form for further information)</p>
+                        <ol className="is-ol" type="1">
+                          {/* Question 1 */}
+                          <li>
+                            <div className="checkbox-group-two">
+                              <label className="is-add">
+                                 Have you been outside of the UK for 6 months or more in the past 5 years?<br /> *If ‘yes’, overseas police check(s) will be required
+                              </label>
+                              <div className="checkbox-flex">
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="yes"
+                                    name="working"
+                                    value="yes"
+                                    checked={isRiskChecked.yes}
+                                    onChange={() =>
+                                      setIsRiskChecked({ yes: !isRiskChecked.yes, no: false })
+                                    }
+                                  />
+                                  <label htmlFor="yes">Yes</label>
+                                </div>
+
+                                <div className="checkbox-group">
+                                  <input
+                                    type="checkbox"
+                                    id="no"
+                                    name="working"
+                                    value="no"
+                                    checked={isRiskChecked.no}
+                                    onChange={() =>
+                                      setIsRiskChecked({ yes: false, no: !isRiskChecked.no })
+                                    }
+                                  />
+                                  <label htmlFor="no">No</label>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div className="form-group-two">
+                              <label htmlFor="accountHolderName">Dates (months and/years outside the UK in past 5 yrs.):</label>
+                              <input
+                                type="text"
+                                placeholder="2 years and 6 months"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div className="form-group-two">
+                              <label htmlFor="accountHolderName">Location(s) :</label>
+                              <input
+                                type="text"
+                                placeholder="Vxhvaucvjkwcg"
+                              />
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
                 </form>
               </div>
+              <div className="edidprofile-buttons">
+                      <div className="row">
+                        <div className="col-md-2"></div>
+                        <div className="col-md-4">
+                          <div className="editprofile-button">
+                            <button>Save</button>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="editprofile-button">
+                            <button>Next</button>
+                          </div>
+                        </div>
+                        <div className="col-md-2"></div>
+                      </div>
+                    </div>
             </div>
-            
           </div>
-         
         </div>
       </section>
       <style jsx>{`
+      .form-group-two {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
 
+.form-group-two input{
+  max-width: 50%;
+  width: 100%;
+}
+#checkbox-groupbox-two {
+    display: grid
+;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .form{
     padding: 0;
 }
@@ -346,7 +633,7 @@ color: #1D71B7;
 .form-containtbox{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 .form-group {
     display: flex;
@@ -359,7 +646,7 @@ color: #1D71B7;
 
 .form-group  label {
 padding-top: 8px;
-font-family: 'Roboto';
+    line-height: 1.8;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
@@ -376,9 +663,6 @@ background: #F5F7FA;
 border-radius: 5px;
 border: none;
 padding: 10px  ;
-
-/* Mr/Mrs./Miss. */
-font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
@@ -386,14 +670,6 @@ display: flex;
 align-items: center;
 color: #999999;
 }
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-gap: 30px;
-
-}
-
 
 
 .is-margin{
@@ -410,8 +686,6 @@ gap: 30px;
     border: 1.5px solid #B4D3E0;
     margin-top: 10px;
 }
-
-
 .is-width{
  width: 85% !important;
 }
@@ -420,8 +694,6 @@ gap: 30px;
     width: 24% !important;
    }
 .checkbox-group{
-    /* Group 1000001775 */
-
 display: flex;
 flex-direction: row;
 gap: 8px;
@@ -436,7 +708,7 @@ align-items: center;
 color: #303030;
 }
 .form-text{
-    font-family: 'Roboto';
+        padding-top: 15px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -454,7 +726,7 @@ color: #303030;
 .form-box{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
 }
 .checkbox-group-two{
     display: flex !important;
@@ -463,10 +735,11 @@ color: #303030;
 }
 
 .is-ol{
+list-style: auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding-left: 16px !important;
+    gap: 10px;
+   
 }
 .is-list{
     display: flex;
@@ -633,11 +906,20 @@ border: 1px solid #ECF3F8;
 }
 
 @media (max-width: 730px) {
+.form-group-two {
+    display: block;
+             }
     .gap{
         gap: 20px !important;
     }
-        
-    
+       #checkbox-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    } 
+    #checkbox-groupbox-two {
+    display: grid;
+      grid-template-columns: 1fr;
+}
         .form-containtbox {
            
             gap: 20px;

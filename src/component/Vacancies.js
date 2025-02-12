@@ -15,26 +15,27 @@ function Vacancies() {
     <div>
       <div>
         <Navbar />
-        <div className="container">
-          <div className="dashbord-text">
-            <h3>Vacancies</h3>
-            {/* <hr/> */}
-          </div>
+        <div className="container dashbord-text">
+          <h3>Vacancies</h3>
+          {/* <hr/> */}
         </div>
         <div className="webpage2">
           <div className="webpage-1">
             <div class="main-inputs">
               <div className="inputs">
                 <div class="input1">
+                {/* <img src="Group.png" alt="" /> */}
                   <i class="fa fa-briefcase" aria-hidden="true"></i>
                   <input
                     type="text"
                     placeholder="Job title, keywords or company"
                   />
                 </div>
+                {/* <span className="divider">|</span> */}
                 <div className="input2">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <input type="text" placeholder="Location or postcode" />
+                {/* <img src="Layer_2.png" alt="" /> */}
+                <i class="fa-solid fa-location-dot"></i>
+                  <input type="text" placeholder="Location or post code" />
                 </div>
                 <div className="clint-search-button">
                   {/* Pass the handleClick function to onClick */}
@@ -80,19 +81,22 @@ function Vacancies() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -108,19 +112,22 @@ function Vacancies() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -136,19 +143,22 @@ function Vacancies() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -164,19 +174,22 @@ function Vacancies() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <Link to={"/"} className="dropdown-item">
                     Menu item
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -186,9 +199,15 @@ function Vacancies() {
         Education
     </button>
     <ul className="dropdown-menu">
-        <li><a className="dropdown-item" href="#">Menu item</a></li>
-        <li><a className="dropdown-item" href="#">Menu item</a></li>
-        <li><a className="dropdown-item" href="#">Menu item</a></li>
+        <li> <Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+        <li> <Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
+        <li> <Link to={'/'} className="dropdown-item" >
+                                    Menu item
+                                </Link></li>
     </ul>
 </div>
 
@@ -221,19 +240,15 @@ function Vacancies() {
                 <td>Day / Night</td>
                 <td>0</td>
                 <td>0</td>
-                  <td>
-                <Link to="/Vacanciesdetail">
-
+                <td>
+                  {" "}
+                  <div className="clint-search-button">
                     {" "}
-                    <div className="clint-search-button">
-                      {" "}
-                      <button data-id="model" data-target="#model">
-                        Apply
-                      </button>
-                    </div>
-                </Link>
-
-                  </td>
+                    <button data-id="model" data-target="#model">
+                      Apply
+                    </button>
+                  </div>
+                </td>
                 <td>
                   <img src="assets/img/Group (4).png" alt="" />
                 </td>

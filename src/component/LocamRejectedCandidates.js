@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from './Navbar';
 
 export default function LocamRejectedCandidates() {
     return (
         <div>
+          <Navbar />
           <div className="container">
             <div className="dashbord-text">
               <h3>Selected Candidates</h3>
@@ -255,22 +257,15 @@ Rejected
               padding: 10px 20px; /* Add padding */
               font-size: 16px; /* Font size */
               cursor: pointer; /* Pointer cursor on hover */
-              font-family: Arial, sans-serif; /* Font styling */
               display: flex; /* Flexbox for icon and text */
               align-items: center; /* Center items vertically */
               gap: 10px; /* Space between icon and text */
             }
-    
-           
-    
             .button-icon {
               display: inline-block;
               vertical-align: middle;
             }
-              .experience-section {
-      font-family: Arial, sans-serif;
-      // margin: 20px;
-    }
+     
     
     h2 {
       text-align: left;
@@ -308,6 +303,22 @@ Rejected
       .edidprofile-buttons {
          margin-bottom: 0px !important;
     }
+          @media (max-width: 768px) {
+.profile-Page {
+        display: block;
+    }
+        .experience-row {
+    display: block;
+}
+      }
+ @media (max-width: 1024px) {
+.profile-Page {
+        display: block;
+    }
+        .experience-row {
+    display: block;
+}
+      }
     
           `}</style>
         </div>

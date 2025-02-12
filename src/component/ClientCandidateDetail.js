@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function ClientCandidateDetail() {
   return (
     <div>
+      <Navbar />
       <div className="container">
         <div className="dashbord-text">
           <h3>Candidate Detail</h3>

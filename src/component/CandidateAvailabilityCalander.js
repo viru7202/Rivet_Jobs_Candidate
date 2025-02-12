@@ -3,6 +3,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { format, parse, startOfWeek, getDay } from "date-fns";
 import enUS from "date-fns/locale/en-US";
+import Navbar from "./Navbar";
 
 const locales = {
   "en-US": enUS,
@@ -65,6 +66,7 @@ export default function CustomCalendar() {
 
   return (
     <div>
+      <Navbar />
       <div className="container">
         <div className="dashbord-text">
           <h3>Availability calendar </h3>
@@ -177,7 +179,7 @@ export default function CustomCalendar() {
 // Styles
 const styles = {
   container: {
-    padding: "20px",
+    padding: "0px",
   },
   calendar: {
     height: "500px",

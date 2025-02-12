@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 
 export default function LocamjobCandidateDetail() {
@@ -20,7 +20,7 @@ export default function LocamjobCandidateDetail() {
     <div>
       <Navbar />
       <div className="container">
-        <div className="dashbord-text" style={{padding: '40px 0'}}>
+        <div className="dashbord-text" style={{ padding: "40px 0" }}>
           <h3>Candidate Detail</h3>
           {/* <hr style={{ border: "2px solid #B4D3E0" }} /> */}
         </div>
@@ -28,8 +28,12 @@ export default function LocamjobCandidateDetail() {
         <div className="container">
           <div className="candetail">
             <button className="detail-approve">Approve</button>
-            <div className="detail-reject" onClick={openModal} style={{ cursor: 'pointer' }}>
-              <h4 >Reject</h4>
+            <div
+              className="detail-reject"
+              onClick={openModal}
+              style={{ cursor: "pointer" }}
+            >
+              <button className="detail-reject">Reject</button>
             </div>
           </div>
           <div className="mainbox">
@@ -186,138 +190,117 @@ export default function LocamjobCandidateDetail() {
             </div>
           </div>
           <div className="edidprofile-buttons">
-          <div className="row">
-           
-            <div className="col-md-6">
-              <div className="editprofile-button">
-                <button>Download CV </button>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="editprofile-button">
+                  <button>Download CV </button>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="editprofile-button">
+                  <button>Preview CV</button>
+                </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="editprofile-button">
-                <button>Preview CV</button>
+          </div>
+
+          {/* Modal for Cancellation */}
+          {isModalOpen && (
+            <div className="popup-overlay">
+              <div className="modal-content">
+                <h3>Select a valid Reason for Cancellation</h3>
+                <div className="reason-container">
+                  <label className="reason-label">Reason :</label>
+                  <select className="reason-select">
+                    <option>Select a Reason</option>
+                    <option>Sickness</option>
+                    <option>Double Shift</option>
+                    <option>Other Reason</option>
+                  </select>
+                </div>
+                <div className="reason-container">
+                  <label className="reason-label">Other :</label>
+                  <input type="text" placeholder="Enter any other reason." />
+                </div>
+                <div className="popup-buttons">
+                  <button onClick={closeModal}>Back</button>
+                  <button onClick={confirmCancellation}>Confirm</button>
+                </div>
               </div>
             </div>
-          </div>
-          </div>
-
- {/* Modal for Cancellation */}
- {isModalOpen && (
-        <div className="popup-overlay">
-          <div className="modal-content">
-            <h3>Select a valid Reason for Cancellation</h3>
-            <div className="reason-container">
-              <label className="reason-label">Reason :</label>
-              <select className="reason-select">
-                <option>Select a Reason</option>
-                <option>Sickness</option>
-                <option>Double Shift</option>
-                <option>Other Reason</option>
-              </select>
-            </div>
-            <div className="reason-container">
-              <label className="reason-label">Other :</label>
-              <input type="text" placeholder="Enter any other reason." />
-
-            </div>
-            <div className="popup-buttons">
-              <button onClick={closeModal}>Back</button>
-              <button onClick={confirmCancellation}>Confirm</button>
-            </div>
-
-
-
-          </div>
-        </div>
-      )}
-
+          )}
         </div>
         <style jsx>{`
-
-   .modal-content h3{
-         margin: 30px 0;
-        font-size: 24px;
+          .modal-content h3 {
+            margin: 30px 0;
+            font-size: 24px;
             font-weight: 700;
-    color: #3E3E3E;
-    }
-     .popup-overlay {
-          backdrop-filter: blur(5px);
-          z-index: 10;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
+            color: #3e3e3e;
+          }
+      
 
-      .modal-content {
-          margin: 15px;
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 600px;
-        text-align: center;
-      }
+          .modal-content {
+            margin: 15px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 600px;
+            text-align: center;
+          }
 
-      .reason-container {
-        padding-top: 30px;
-display: flex;
-align-items: center;
-}
+          .reason-container {
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+          }
 
-.reason-label {
-color: #1D71B7;
-font-size: 16px;
-margin-right: 10px; /* Spacing between label and select */
-}
+          .reason-label {
+            color: #1d71b7;
+            font-size: 16px;
+            margin-right: 10px; /* Spacing between label and select */
+          }
 
-.reason-select {
-  background: #ECECEC;
-padding: 8px;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 16px;
-width: 294px;
-}
+          .reason-select {
+            background: #ececec;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 294px;
+          }
 
+          .popup-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 35px;
+          }
 
-     .popup-buttons {
-               display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-        margin-bottom: 35px;
-      }
+          .popup-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
 
-      .popup-buttons button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+          .popup-buttons button:first-child {
+            background: #ddd;
+            color: #333;
+          }
 
-      .popup-buttons button:first-child {
-        background: #ddd;
-        color: #333;
-      }
-
-      .popup-buttons button:last-child {
-        background: #1d71b7;
-        color: white;
-      }
-         .reason-container input,.reason-container textarea {
-        margin-top: 5px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        width: 294px;
+          .popup-buttons button:last-child {
+            background: #1d71b7;
+            color: white;
+          }
+          .reason-container input,
+          .reason-container textarea {
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 294px;
             margin-left: 14px;
-      }
- 
+          }
 
           .mainbox {
             width: 100%;
@@ -360,13 +343,13 @@ width: 294px;
             border-radius: 5px;
           }
 
-          .detail-reject h4 {
-            padding: 13px 15px;
+          .detail-reject button {
+         
             font-family: Roboto;
             font-size: 16px;
             font-weight: 700;
             text-align: center;
-
+            border:none;
             color: #f5f7fa;
           }
           .firstbox {
@@ -491,6 +474,7 @@ width: 294px;
             max-width: 100%;
           }
           .yes {
+            border-radius: 5px;
             margin-left: 20px;
             margin-top: 20px;
             display: flex;
@@ -529,48 +513,40 @@ width: 294px;
             display: flex;
             gap: 12px;
           }
-
-          // .lines{
-          //   margin-top: 20px;
-          //   width: 100%;
-
-          // }
-
-          .para5 {
+ .para5 {
             margin-top: 10px;
           }
 
           /* media quary start */
 
-          @media (max-width: 1280px) {
-            //   .container {
-            //     max-width: 800px;
-            //   }
-          }
 
-          @media (max-width: 770px) {
+    
+          @media (max-width: 768px) {
+                 .detail-approve {
+              width: 120px;
+              height: 40px;
+            }
+            .detail-reject {
+              width: 120px;
+              height: 40px;
+            }
+            .detail-approve h4 {
+              padding: 10px;
+            }
+            .detail-reject h4 {
+              padding: 10px;
+            }
             .secondbox {
               width: 50%;
+              margin-top: 5px;
+            margin-left: 0px !important;      
             }
-          }
-
-          @media (max-width: 720px) {
-            .secondbox {
-              width: 50%;
-            }
-          }
-          @media (max-width: 670px) {
-            .secondbox {
-              width: 50%;
-            }
-          }
-          @media (max-width: 665px) {
             .mainbox {
               width: 100%;
               margin: auto;
-              margin-top: 40px;
+              margin-top: 0px;
               display: flex;
-              gap: 10px;
+              gap: 0 !important;
               flex-direction: column;
             }
 
@@ -593,48 +569,19 @@ width: 294px;
 
             .firstbox {
               width: 100%;
-              margin-left: 20px;
+              margin-left: 0px !important;
               margin-top: 20px;
             }
+        .interviews h4 {
+    margin-left: 0px;
+}
+    .interviews {
+    margin-top: 10px;
 
-            .secondbox {
-              width: 100%;
-            }
-          }
-
-          @media (max-width: 590px) {
-          }
-          @media (max-width: 520px) {
-            .mainbox {
-              margin-top: 0px;
-            }
-            .detail-approve {
-              width: 120px;
-              height: 40px;
-            }
-            .detail-reject {
-              width: 120px;
-              height: 40px;
-            }
-            .detail-approve h4 {
-              padding: 10px;
-            }
-            .detail-reject h4 {
-              padding: 10px;
-            }
-
-            .yes {
-              width: 30%;
-            }
-          }
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+}
           }
 
-          @media (max-width: 410px) {
-          }
+      
         `}</style>
       </div>
     </div>

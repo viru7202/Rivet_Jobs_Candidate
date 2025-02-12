@@ -1,11 +1,16 @@
-
-import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
+import React, { useState } from "react";
 
 
 // Popup component
 function Popup({ onClose }) {
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      console.log("Selected file:", file.name); // You can replace this with your logic
+    }
+  };
   return (
     <div className="popup-overlay">
       <div className="popup-content">
@@ -17,11 +22,21 @@ function Popup({ onClose }) {
         </div>
 
         <div className="popup-section">
-          <p style={{textAlign:'center', marginBottom:'13px'}}>or</p>
+          <p style={{ textAlign: "center", marginBottom: "13px" }}>or</p>
           <div className="drag-drop-area">
             <i className="fa fa-upload"></i>
             <p>Drag and Drop here</p>
-            <button>Select file</button>
+            <button
+              onClick={() => document.getElementById("fileInput").click()}
+            >
+              Select file
+            </button>
+            <input
+              type="file"
+              id="fileInput"
+              style={{ display: "none" }}
+              onChange={handleFileChange}
+            />
           </div>
         </div>
 
@@ -45,6 +60,10 @@ function Popup({ onClose }) {
 }
 
 function Webpage3() {
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
+
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -66,14 +85,17 @@ function Webpage3() {
                 <h3>Healthcare Assistant</h3>
               </div>
               <div className="health-collection-text">
-              <Link to="/ClientProfile">
                 <div className="cinnamon-care-collection">
                   <p> <span className="cl">Cinnamon Care Collection</span><img src="assets/img/Group 653.png" alt="" /></p>
                 </div>
-                </Link>
-
+                <ReactStars
+                  count={5}
+                  onChange={ratingChanged}
+                  size={24}
+                  activeColor="#F19E1F"
+                />
                 <div className="cinnamon-care-collection">
-                  <p> <img src="assets/img/Group 627.png" alt="" /><span className="rev">84 Reviews</span><img src="assets/img/Group 653.png" alt="" /></p>
+                  <p><span className="rev">84 Reviews</span><img src="assets/img/Group 653.png" alt="" /></p>
                 </div>
               </div>
               <div className="london">
@@ -181,21 +203,12 @@ function Webpage3() {
         {isPopupOpen && <Popup onClose={handleClosePopup} />}
       </div>
       <style jsx>{`
+
 /* Overlay for popup */
-.popup-overlay {
-     backdrop-filter: blur(5px);
-     z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.undefined.react-stars {
+    top: -7px;
 }
+
    .popup-content h3{
     text-align: center;
           font-size: 24px;
@@ -209,8 +222,7 @@ function Webpage3() {
   width: 90%;
   max-width: 500px;
   border-radius: 8px;
-
-      scale: 0.8;
+      scale: 0.9;
 }
 
 /* Popup section styling */

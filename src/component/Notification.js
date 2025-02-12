@@ -7,7 +7,8 @@ function Notification() {
     <div>
       <Navbar />
       <div className="container">
-        <h2 className="notification-title">Notifications</h2>
+        
+        <h3 className="notification-title">Notifications</h3>
         <div className="notification-list">
           <div className="notification-item">
             <div className="icon" style={{ backgroundColor: "#FFA500" }}>

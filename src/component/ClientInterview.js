@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import Navbar from "./Navbar";
+import { Link, NavLink } from "react-router-dom";
 
 export default function ClientInterview() {
+  // popup3
+  const [isModalOpenn, setIsModalOpenn] = useState(false);
+
+  const openModall = () => {
+    setIsModalOpenn(true);
+  };
+  const closeModall = () => {
+    setIsModalOpenn(false);
+  };
   return (
     <div>
+      <Navbar />
       <div className="container">
         <div className="dashbord-text">
           <h3>Interviews</h3>
@@ -26,118 +38,7 @@ export default function ClientInterview() {
         {/* </div> */}
       </div>
       <div className="container">
-        <div className="permanent_job_dropdown">
-          <div className="btn-group">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Interview Date
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="btn-group">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Pay
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-            </ul>
-          </div>
 
-          <div className="btn-group">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Company
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="btn-group">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Applied Date
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Menu item
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
       <Tabs>
         <div className="permanent-job-tab-clint-webpg2">
@@ -151,9 +52,96 @@ export default function ClientInterview() {
           </TabList>
         </div>
         <TabPanel>
+
           <div className="container">
             <div className="row">
-              <div className="col-md-4">
+              <div className="permanent_job_dropdown">
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Interview Date
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Client
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Job Title
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+             
+              </div>
+              <div className="col-md-5">
                 <div className="upcoming-part1">
                   <div className="upcoming-text">
                     <div className="upcoming-main-text">
@@ -207,7 +195,7 @@ export default function ClientInterview() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-8">
+              <div className="col-md-7">
                 <div className="clint-detail-buttons">
                   <div className="xxy">
                     <button className="invite-buttonn">
@@ -269,7 +257,7 @@ export default function ClientInterview() {
                     </div>
                   </div>
                   <div className="review-button">
-                    <button className="invite-buttonn">Review Interview</button>
+                    <button className="invite-buttonn" onClick={openModall} style={{ cursor: 'pointer' }}>Review Interview</button>
                   </div>
                 </div>
                 <div className="clint-detail-part-2">
@@ -360,14 +348,126 @@ export default function ClientInterview() {
         <TabPanel>
           <div className="container">
             <div className="row">
+              <div className="permanent_job_dropdown">
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Interview Date
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Client
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Job Title
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="btn-group">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Status
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to={'/'} className="dropdown-item" >
+                        Menu item
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div className="col-md-4">
                 <div className="upcoming-part1">
                   <div className="upcoming-text">
                     <div className="upcoming-main-text">
-                      <div className="upcoming-text1">
+                      <div className="upcoming-text2">
                         <h3>Upcoming 2</h3>
                       </div>
-                      <div className="upcoming-text2">
+                      <div className="upcoming-text1">
                         <h3>Past 8</h3>
                       </div>
                     </div>
@@ -383,12 +483,22 @@ export default function ClientInterview() {
                         <p>Cinnamon</p>
                       </div>
                       <div className="upcoming-box2-text">
-                        <div className="upcoming-box2-text1">
-                          <p>Timing :- 11:00 to 12:00</p>
-                        </div>
-                        <div className="upcoming-box2-text2">
-                          <p>Applied: Feb 19</p>
-                        </div>
+                        <button
+                          style={{
+                            display: "block",
+                            width: "100px",
+                            height: "29px",
+                            background: "#F0D3CC80",
+                            color: "#B71E1E",
+                            borderRadius: "20px",
+                            border: "none",
+                            marginTop: "15px",
+                            fontWeight: '700',
+                          }}
+                        >
+                          Rejected
+                        </button>
+
                       </div>
                     </div>
                   </div>
@@ -403,12 +513,21 @@ export default function ClientInterview() {
                         <p>Cinnamon</p>
                       </div>
                       <div className="upcoming-box2-text">
-                        <div className="upcoming-box2-text1">
-                          <p>Timing :- 11:00 to 12:00</p>
-                        </div>
-                        <div className="upcoming-box2-text2">
-                          <p>Applied: Feb 19</p>
-                        </div>
+                        <button
+                          style={{
+                            display: "block",
+                            width: "100px",
+                            height: "29px",
+                            background: "#CCF0EE80",
+                            color: "#1EB76E",
+                            borderRadius: "20px",
+                            border: "none",
+                            marginTop: "15px",
+                            fontWeight: '700',
+                          }}
+                        >
+                          Selected
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -417,18 +536,18 @@ export default function ClientInterview() {
               <div className="col-md-8">
                 <div className="clint-detail-buttonss">
                   <button className="invite-buttonn">
-                  <svg
-                          width="16"
-                          height="15"
-                          viewBox="0 0 16 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M3.20027 11.7845H1.71654C0.671304 11.7845 0 11.1093 0 10.0571V1.72209C0 0.6739 0.67353 0 1.721 0H14.2857C15.3251 0 16 0.6739 16 1.71225C16 4.51309 16 7.31363 16 10.1139C16 10.9058 15.5361 11.5368 14.8052 11.7273C14.6379 11.7669 14.4664 11.7854 14.2946 11.7823C12.2335 11.7859 10.1727 11.7859 8.11218 11.7823C7.99153 11.7776 7.87342 11.8179 7.78054 11.8954C6.59908 12.8494 5.41569 13.8012 4.23037 14.7507C4.17428 14.7954 4.11908 14.8432 4.06032 14.8848C3.88226 15.0109 3.69351 15.0404 3.49585 14.9385C3.4045 14.8954 3.32784 14.8261 3.2755 14.7394C3.22315 14.6527 3.19745 14.5524 3.2016 14.4511C3.19982 13.704 3.19982 12.9564 3.2016 12.2085L3.20027 11.7845ZM8.00801 4.28533H6.02482C5.26404 4.28533 4.50281 4.28533 3.74203 4.28533C3.60991 4.28255 3.4815 4.32935 3.3819 4.41659C3.28229 4.50383 3.21864 4.62524 3.20338 4.7571C3.18861 4.88878 3.22287 5.0213 3.29955 5.12913C3.37623 5.23695 3.48992 5.31246 3.61872 5.34112C3.6953 5.3542 3.77305 5.35899 3.85065 5.35543H12.1494C12.1997 5.35543 12.25 5.35856 12.2994 5.35543C12.5246 5.33307 12.6849 5.21725 12.765 5.00484C12.9021 4.64217 12.635 4.28667 12.2241 4.28622C10.8186 4.28473 9.41324 4.28443 8.00801 4.28533ZM5.87124 7.49921C6.57103 7.49921 7.27097 7.49921 7.97107 7.49921C8.19008 7.49921 8.35969 7.40977 8.46742 7.22017C8.66863 6.86242 8.41133 6.43045 7.99065 6.42911C6.57459 6.42508 5.15809 6.42911 3.74158 6.42911C3.6966 6.42879 3.65174 6.43404 3.60804 6.44476C3.48265 6.47541 3.37254 6.55063 3.29807 6.65651C3.22361 6.76238 3.18981 6.89176 3.20294 7.02072C3.21746 7.15258 3.28009 7.27436 3.37875 7.36256C3.4774 7.45075 3.60507 7.49912 3.73713 7.49831C4.44717 7.50189 5.15809 7.49921 5.86901 7.49921H5.87124Z"
-                            fill="#1d71b7"
-                          />
-                        </svg>
+                    <svg
+                      width="16"
+                      height="15"
+                      viewBox="0 0 16 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.20027 11.7845H1.71654C0.671304 11.7845 0 11.1093 0 10.0571V1.72209C0 0.6739 0.67353 0 1.721 0H14.2857C15.3251 0 16 0.6739 16 1.71225C16 4.51309 16 7.31363 16 10.1139C16 10.9058 15.5361 11.5368 14.8052 11.7273C14.6379 11.7669 14.4664 11.7854 14.2946 11.7823C12.2335 11.7859 10.1727 11.7859 8.11218 11.7823C7.99153 11.7776 7.87342 11.8179 7.78054 11.8954C6.59908 12.8494 5.41569 13.8012 4.23037 14.7507C4.17428 14.7954 4.11908 14.8432 4.06032 14.8848C3.88226 15.0109 3.69351 15.0404 3.49585 14.9385C3.4045 14.8954 3.32784 14.8261 3.2755 14.7394C3.22315 14.6527 3.19745 14.5524 3.2016 14.4511C3.19982 13.704 3.19982 12.9564 3.2016 12.2085L3.20027 11.7845ZM8.00801 4.28533H6.02482C5.26404 4.28533 4.50281 4.28533 3.74203 4.28533C3.60991 4.28255 3.4815 4.32935 3.3819 4.41659C3.28229 4.50383 3.21864 4.62524 3.20338 4.7571C3.18861 4.88878 3.22287 5.0213 3.29955 5.12913C3.37623 5.23695 3.48992 5.31246 3.61872 5.34112C3.6953 5.3542 3.77305 5.35899 3.85065 5.35543H12.1494C12.1997 5.35543 12.25 5.35856 12.2994 5.35543C12.5246 5.33307 12.6849 5.21725 12.765 5.00484C12.9021 4.64217 12.635 4.28667 12.2241 4.28622C10.8186 4.28473 9.41324 4.28443 8.00801 4.28533ZM5.87124 7.49921C6.57103 7.49921 7.27097 7.49921 7.97107 7.49921C8.19008 7.49921 8.35969 7.40977 8.46742 7.22017C8.66863 6.86242 8.41133 6.43045 7.99065 6.42911C6.57459 6.42508 5.15809 6.42911 3.74158 6.42911C3.6966 6.42879 3.65174 6.43404 3.60804 6.44476C3.48265 6.47541 3.37254 6.55063 3.29807 6.65651C3.22361 6.76238 3.18981 6.89176 3.20294 7.02072C3.21746 7.15258 3.28009 7.27436 3.37875 7.36256C3.4774 7.45075 3.60507 7.49912 3.73713 7.49831C4.44717 7.50189 5.15809 7.49921 5.86901 7.49921H5.87124Z"
+                        fill="#1d71b7"
+                      />
+                    </svg>
                   </button>
 
                   <div className="">
@@ -534,7 +653,122 @@ export default function ClientInterview() {
         </TabPanel>
       </Tabs>
 
+      {/* popup3 */}
+      {/* Modal for Cancellation */}
+      {isModalOpenn && (
+        <div className="popup-overlay">
+          <div className="modal-contentt">
+            <h3>Review Interview</h3>
+
+            <div className="reason-containerr">
+
+              <input type="text" placeholder="Add Review of the Interview" />
+
+            </div>
+            <div className='bt-reject-hire' style={{ display: 'flex', justifyContent: "space-evenly" }}>
+              <div className="popup-buttonss">
+                <button
+                  style={{
+                    display: "block",
+                    width: "159.16px",
+                    height: "42px",
+                    background: "#CE4747",
+                    color: "#F5F7FA",
+                    borderRadius: "5px",
+                    border: "none",
+                    marginTop: "15px",
+                    fontWeight: '700',
+                  }}
+                >
+                  Rejected
+                </button>
+              </div>
+              <div className="popup-buttonss">
+                <button onClick={closeModall}
+                  style={{
+                    display: "block",
+                    width: "159.16px",
+                    height: "42px",
+                    background: "#24A56F",
+                    color: "#F5F7FA",
+                    borderRadius: "5px",
+                    border: "none",
+                    marginTop: "15px",
+                    fontWeight: '700',
+                  }}
+                >
+                  Selected
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
+  
+     .modal-contentt h3{
+          font-size: 24px;
+              font-weight: 700;
+      color: #3E3E3E;
+      }
+   .modal-contentt {
+       margin: 15px;
+    height: 307px;
+    background-color: white;
+    padding: 47px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+}
+        .reason-containerr {
+  display: flex;
+  align-items: center;
+}
+       .popup-buttonss {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+        .popup-buttonss button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .popup-buttonss button:first-child {
+          background: #ddd;
+          color: #333;
+        }
+        .popup-buttonss button:last-child {
+          background: #1d71b7;
+          color: white;
+              width: 150px;
+        }
+     .reason-containerr input, .reason-containerr textarea {
+    margin-top: 30px;
+    padding: 25px 0 50px 25px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-left: 14px;
+}
+
+     .modal-contenttt h3{
+     text-align: center;
+  margin: 30px 0;
+        font-size: 24px;
+            font-weight: 700;
+    color: #3E3E3E;
+      }
+      .modal-contenttt {
+          margin: 15px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 600px;
+      }
+
         .upcoming-box2-text1 {
           padding: 5px 6px 2px 7px;
         }
@@ -557,6 +791,7 @@ export default function ClientInterview() {
           padding: 2%;
           gap: 20px;
           justify-content: space-between;
+          flex-wrap: wrap;
         }
         .xxy {
           display: flex;

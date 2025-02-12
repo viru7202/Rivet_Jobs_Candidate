@@ -12,8 +12,10 @@ function Webpage1() {
   return (
     <div>
       <Navbar />
+      <div className="container">
       <div className="dashbord-text">
-        <h3>Find Jobs</h3>
+        <h3>Permanent Jobs</h3>
+      </div>
       </div>
       <div className="webpage-1">
         <div class="main-inputs">

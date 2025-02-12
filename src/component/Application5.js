@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
-
 
 const ApplicationForm5 = () => {
 
@@ -231,23 +229,20 @@ const ApplicationForm5 = () => {
                     </div>
 
                     <div className="edidprofile-buttons">
-                        <div className="row">
-                            {/* <div className="col-md-2"></div> */}
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                    <button>Save</button>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="editprofile-button">
-                                <Link to="/ApplicationForm6">
-
-                                    <button>Next</button>
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* <div className="col-md-2"></div> */}
+                      <div className="row">
+                        <div className="col-md-2"></div>
+                        <div className="col-md-4">
+                          <div className="editprofile-button">
+                            <button>Save</button>
+                          </div>
                         </div>
+                        <div className="col-md-4">
+                          <div className="editprofile-button">
+                            <button>Next</button>
+                          </div>
+                        </div>
+                        <div className="col-md-2"></div>
+                      </div>
                     </div>
                   </div>
                 </form>
@@ -328,7 +323,6 @@ color: #1D71B7;
 
 .form-group  label {
 padding-top: 8px;
-font-family: 'Roboto';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
@@ -345,9 +339,6 @@ background: #F5F7FA;
 border-radius: 5px;
 border: none;
 padding: 10px  ;
-
-/* Mr/Mrs./Miss. */
-font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
 font-size: 12px;

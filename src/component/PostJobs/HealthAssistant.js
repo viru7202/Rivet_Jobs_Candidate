@@ -119,13 +119,16 @@ function HealthAssistant() {
                                 <div className="job-detial-about">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur.</p>
-                                <p ><b style={{fontWeight:'600'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur.</b></p>
+                                    <p ><b style={{ fontWeight: '600' }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto eveniet, dolor quo repellendus pariatur.</b></p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-
+                    <div className="buttonss">
+            <div className="back-btn"
+            style={{border:'#1d71b7!important'}}>Back</div>
+          </div>
 
                 </div>
             </div>
@@ -138,6 +141,17 @@ function HealthAssistant() {
     font-weight: 400;
     line-height: 1.6;
     padding: 0; 
+}
+        .back-btn {
+        margin-top: 40px;
+    border-radius: 5px;
+    color: #1d71b7;
+    background-color: #eaf5ff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 50px 10px 50px;
+    border: 1px solid #1d71b7!important;
 }
             .heath-aist h3 {
     padding-top: 8px;
